@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#f9AA33">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:text="Ultimate Driving Machines"/>
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:src="@drawable/mad_logo_trans"
+                android:layout_width="82dp"
+                android:layout_height="82dp"/>
+        </RelativeLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="1"
+            android:columnOrderPreserved="false"
+            android:rowCount="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                android:id="@+id/cardRentACar">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/txtPromoteAD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Promote Advertisement"
+                        android:textStyle="bold"
+                        android:textSize="25dp"/>
+
+                    <ImageView
+                        android:id="@+id/ImgPostAd"
+                        android:layout_width="140dp"
+                        android:layout_height="140dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/gold_madelpng"
+                        android:layout_below="@+id/txtPromoteAD"
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/radioGrp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ImgPostAd"
+                        android:layout_marginLeft="25dp">
+
+                        <RadioButton
+                            android:id="@+id/radio_gold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gold_ad"
+                            android:textStyle="italic|bold"
+                            android:textSize="15dp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_silver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/silver_ad"
+                            android:textStyle="italic|bold"
+                            android:textSize="15dp"/>
+
+                        <RadioButton
+                            android:id="@+id/radio_brownz"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/brownz_ad"
+                            android:textStyle="italic|bold"
+                            android:textSize="15dp"/>
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/amount_per_day"
+                        android:layout_below="@+id/radioGrp1"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <TextView
+                        android:id="@+id/txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/radioGrp1"
+                        android:layout_marginLeft="42dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_toRightOf="@+id/txt4"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/promotaion_days"
+                        android:layout_below="@+id/txt1"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <EditText
+                        android:id="@+id/editTxt1"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/custome_edit_txt"
+                        android:drawableEnd="@drawable/ic_drop_down_24"
+                        android:drawableRight="@drawable/ic_drop_down_24"
+                        android:layout_toRightOf="@+id/txt4"
+                        android:layout_below="@+id/txt2"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="42dp"/>
+
+                    <TextView
+                        android:id="@+id/txt4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_amount"
+                        android:layout_below="@+id/txt3"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+
+                    <TextView
+                        android:id="@+id/txt5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/txt4"
+                        android:layout_below="@+id/editTxt1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="42dp"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <TextView
+                        android:id="@+id/txt6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/enter_promo_code"
+                        android:layout_below="@+id/txt4"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <EditText
+                        android:id="@+id/editTxt2"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/custome_edit_txt"
+                        android:layout_toRightOf="@+id/txt4"
+                        android:layout_below="@+id/txt5"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="42dp"/>
+
+                    <TextView
+                        android:id="@+id/txt7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/discount_amount"
+                        android:layout_below="@+id/txt6"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+
+                    <TextView
+                        android:id="@+id/txt8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/editTxt2"
+                        android:layout_marginLeft="42dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/txt4"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payable Amount"
+                        android:layout_below="@+id/txt7"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="15dp"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+
+                    <TextView
+                        android:id="@+id/txt10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/txt4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/txt8"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="42dp"
+                        android:textStyle="bold"
+                        android:textSize="15dp"/>
+
+                    <Button
+                        android:id="@+id/btnPromote"
+                        android:layout_width="300dp"
+                        android:layout_height="60dp"
+                        android:text="@string/promote_ad"
+                        android:backgroundTint="@color/buttonGray"
+                        android:layout_toRightOf="@id/radioGrp1"
+                        android:layout_below="@+id/txt10"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"/>
+
+                    <Button
+                        android:id="@+id/btnPayment"
+                        android:layout_width="300dp"
+                        android:layout_height="60dp"
+                        android:text="Make Payment"
+                        android:backgroundTint="@color/buttonGray"
+                        android:layout_toLeftOf="@id/btnPromote"
+                        android:layout_below="@+id/txt10"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"/>
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="all rights resived @2022"
+            android:textSize="14dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_marginLeft="138dp"
+            android:layout_marginTop="15dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

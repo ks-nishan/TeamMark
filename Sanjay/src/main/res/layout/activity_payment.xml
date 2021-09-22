@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Payment">
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="779dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginLeft="80dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/pay"
+            android:textColor="@color/black"
+            android:textSize="34sp" />
+<TextView
+    android:layout_width="50dp"
+    android:layout_height="20dp"
+    android:layout_marginLeft="280dp"
+
+    android:text="ID:"
+    ></TextView>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="-25dp"
+            android:layout_marginLeft="300dp"
+            android:id="@+id/Booking_ID"
+            android:textStyle="bold"
+            android:textSize="24dp"
+
+            >
+
+
+        </TextView>
+
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray1" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="407dp"
+            android:layout_height="233dp"
+            app:srcCompat="@drawable/card" />
+
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="450dp"
+            android:layout_height="300dp">
+
+            <ImageView
+                android:layout_marginTop="15dp"
+                android:layout_width="550dp"
+                android:layout_height="400dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="0dp"
+                android:src="@drawable/pay2" />
+            <EditText
+                android:layout_width="245dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="54dp"
+               android:layout_marginTop="85dp"
+                android:background="@color/white"
+                android:hint="Holder's name"
+                android:id="@+id/Holder_Name"
+
+                ></EditText>
+            <EditText
+                android:layout_width="245dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="130dp"
+                android:background="@color/white"
+                android:id="@+id/Card_Number"
+                android:hint="card number"
+                >
+
+            </EditText>
+            <EditText
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="54dp"
+                android:layout_marginTop="190dp"
+                android:background="@color/white"
+         android:id="@+id/Card_Number_MM"
+                android:hint="MM"
+                >
+
+            </EditText>
+            <EditText
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="145dp"
+                android:layout_marginTop="190dp"
+                android:background="@color/white"
+                android:id="@+id/Card_Number_YY"
+                android:hint="YY"
+                >
+
+            </EditText>
+            <EditText
+                android:layout_width="65dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="335dp"
+                android:layout_marginTop="178dp"
+                android:background="@color/white"
+
+                android:id="@+id/Card_Number_CVC"
+                android:hint="CVC"
+                >
+            </EditText>
+        </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@color/yellow"
+    >
+    <View
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/gray1" />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Total Amount :"
+        android:textColor="@color/black"
+        android:textSize="24dp"></TextView>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="206dp"
+        android:fontFamily="sans-serif-black"
+android:id="@+id/Card_Number_TOT"
+        android:textColor="@color/black"
+        android:textSize="24dp"></TextView>
+
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="280dp"
+        android:id="@+id/PAY_NOW_BUTTON"
+android:text="@string/pay2"
+        app:backgroundTint="@color/gray3">
+
+
+    </Button>
+
+</RelativeLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

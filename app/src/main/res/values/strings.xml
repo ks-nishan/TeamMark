@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">TeamMark-copy</string>
+    //promote AD page Start
+    <string name="gold_ad">Gold AD</string>
+    <string name="silver_ad">Silver AD</string>
+    <string name="brownz_ad">Brownz AD</string>
+    <string name="amount_per_day">Amount per Day</string>
+    <string name="lkr_500">LKR.500/=</string>
+    <string name="promotaion_days">Promotaion Days</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="lkr_1500">LKR.1500/=</string>
+    <string name="enter_promo_code">Enter Promo Code</string>
+    <string name="discount_amount">Discount Amount</string>
+    <string name="lkr_300">LKR.300/=</string>
+    <string name="lkr_1200">LKR.1200/=</string>
+    <string name="promote_ad">Promote AD</string>
+
+    //post Ad and edit Ad page start
+    <string name="post_advertisement">Post Advertisement</string>
+    <string name="ultimate_driving_machines">Ultimate Driving Machines</string>
+    <string name="take_photo">Take photo</string>
+    <string name="upload_photo">Upload photo</string>
+    <string name="advertisement_title">Advertisement Title</string>
+    <string name="district">District</string>
+    <string name="capasity">Capasity</string>
+    <string name="engine_cc">Engine cc</string>
+    <string name="land_line_number">Land Line Number</string>
+    <string name="amount">Amount</string>
+    <string name="negotiable">Negotiable</string>
+    <string name="description">Description</string>
+    <string name="post_ad">Post AD</string>
+    <string name="edit_advertisement">Edit Advertisement</string>
+
+    //Advertisement details page start
+    <string name="mazda_z_for_rent">Mazda z for Rent</string>
+    <string name="_4_person">4 Person</string>
+    <string name="gampaha">Gampaha</string>
+    <string name="_2400cc">2400cc</string>
+    <string name="lkr_3000_per_day">LKR.3000/per day</string>
+    <string name="_077_1946228">077 1946228</string>
+    <string name="_011_8923446">011 8923446</string>
+    <string name="Description">Description</string>
+    <string name="some_description_about_the_car">Some Description About The Car</string>
+    <string name="resave">Resave</string>
+    <string name="promote">Promote</string>
+    <string name="hornat_for_rent">Hornat for Rent</string>
+    <string name="audi_for_rent">Audi for Rent</string>
+    <string name="scorty_for_rent">Scorty for Rent</string>
+    <string name="vezal_for_rent">Vezal for Rent</string>
+    <string name="benz_for_rent">Benz for Rent</string>
+
+    //Login Page , Registration ,forgot password starting
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="welcome">Welcome !!!</string>
+    <string name="email">Email</string>
+    <string name="have_an_account">Have an Account?</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="update_password">Update Password</string>
+
+    //customer dashboard starting
+    <string name="welcome_customer">Welcome Customer!</string>
+    <string name="user_dashboad">User Dashboad</string>
+    <string name="rent_a_car">Rent a Car</string>
+    <string name="parkingslot">Parkingslot</string>
+    <string name="resavation">Resavation</string>
+    <string name="feedback">Feedback</string>
+    <string name="buy_a_car">Buy a Car</string>
+    <string name="logout">Logout</string>
+    <string name="all_rights_resived_2022">all rights resived @2022</string>
+    <string name="welcome_admin">Welcome Admin!!!</string>
+    <string name="admin_dashboad">Admin Dashboad</string>
+    <string name="post_cars">Post Cars</string>
+    <string name="edit_cars">Edit Cars</string>
+    <string name="post_slots">Post Slots</string>
+    <string name="edit_slots">Edit Slots</string>
+    <string name="reviews">Reviews</string>
+
+    <array name="capasity">
+        <item>2 Person</item>
+        <item>4 Person</item>
+        <item>5 Person</item>
+        <item>6 persons</item>
+    </array>
+
+    <array name="fueleType">
+        <item>Petrol</item>
+        <item>Diseal</item>
+        <item>Electric</item>
+    </array>
+
+
+</resources>

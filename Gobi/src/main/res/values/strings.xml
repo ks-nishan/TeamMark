@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">TeamMark</string>
+
+    <string name="parkingTitle">Parking Areas</string>
+    <string name="parkingSubTitle">Find All Parking Areas</string>
+
+    <string name="endPage">No more parking areas</string>
+
+    <string name="addicon">+</string>
+    <string name="btnCreate">Create</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="btnUpdate">Update</string>
+
+    <string name="parkingCreateTitle">Create New Parking Area</string>
+
+    <string name="lblTitle">Parking Area Title:</string>
+    <string name="edtTitle">Enter parking area title/name</string>
+
+    <string name="lblAddress">Parking Area Address:</string>
+    <string name="edtAddress">Enter parking area address/location</string>
+
+    <string name="lblVehicleType">Vehicle Type:</string>
+    <string name="chkTypeBike">Bike</string>
+    <string name="chkTypeCar">Car</string>
+
+    <string name="lblSlots">Number of Slots:</string>
+    <string name="edtCountBikeSlots">No of Bike Slots</string>
+    <string name="edtCountCarSlots">No of Car Slots</string>
+
+    <string name="lblFee">Parking Fee per Hour:</string>
+    <string name="edtFeeBike">Bike Fee</string>
+    <string name="edtFeeCar">Car Fee</string>
+
+    <string name="lblEVFacility">EV Facility:</string>
+    <string name="radEVYes">Yes</string>
+    <string name="radEVNo">No</string>
+
+    <string name="lblWatt">Charging Speed:</string>
+    <string name="chkWattMin">10kw</string>
+    <string name="chkWattMed">15kw</string>
+    <string name="chkWattMax">20kw</string>
+
+    <string name="lblCon">Connector Type:</string>
+    <string name="chkConTypeTwo">Type 2</string>
+    <string name="chkConCombo">Combo</string>
+    <string name="chkConCHA">CHA</string>
+
+    <string name="titleParkingArea">Parking Area</string>
+    <string name="addressParkingArea">Location ...</string>
+    <string name="feeParkingArea">100Rs/hr</string>
+
+    <string name="iconBikeSlots">🏍</string>
+    <string name="numBikeSlots">25</string>
+
+    <string name="iconCarSlots">🚗</string>
+    <string name="numCarSlots">50</string>
+
+    <string name="iconEVFacility">🔋</string>
+    <string name="wattEVFacility">10kw</string>
+
+    <string name="iconConnector">🔌</string>
+    <string name="txtConnector">Combo</string>
+
+
+
+</resources>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    android:layout_margin="13dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="13dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/titleParkingArea"
+                android:layout_width="141dp"
+                android:layout_height="30dp"
+                android:text="@string/titleParkingArea"
+                android:textAlignment="center"
+                android:textColor="@color/orange_500"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/iconBikeSlots"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="@string/iconBikeSlots"
+                        android:textColor="@color/blue_600"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/numBikeSlots"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="@string/numBikeSlots"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/blue_600"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="30dp">
+
+                    <TextView
+                        android:id="@+id/iconCarSlots"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="@string/iconCarSlots"
+                        android:textColor="@color/blue_600"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/numCarSlots"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="@string/numBikeSlots"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/blue_600"
+                        android:textSize="17sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="30dp">
+
+                    <TextView
+                        android:id="@+id/iconEVFacility"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="@string/iconEVFacility"
+                        android:textColor="@color/blue_600"
+                        android:includeFontPadding="true"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgArea"
+                android:layout_width="match_parent"
+                android:layout_height="275dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/feeCar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btncreate"
+                android:padding="8dp"
+                android:text="100Rs/hr"
+                android:gravity="left"
+                android:layout_weight="1"
+                android:textColor="@color/blue_800"
+                android:textSize="18sp"
+                android:layout_marginRight="30dp"/>
+
+            <TextView
+                android:id="@+id/feeBike"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btncreate"
+                android:padding="8dp"
+                android:text="100Rs/hr"
+                android:gravity="right"
+                android:layout_weight="1"
+                android:textColor="@color/blue_800"
+                android:textSize="18sp"
+                android:layout_marginLeft="30dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

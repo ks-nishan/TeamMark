@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Team Mark</string>
+    <string name="Username">Username</string>
+    <string name="Phone">Phone</string>
+    <string name="Email">Email</string>
+    <string name="profile">My Profile</string>
+    <string name="Username1">Gp.Muththu</string>
+    <string name="Phone1">0750906672</string>
+    <string name="Email1">Gp@gmail.com</string>
+    <string name="Save">Save</string>
+    <string name="edit">EDIT</string>
+    <string name="password">Password</string>
+    <string name="password1">GpTheMuththu</string>
+    <string name="PickupDate">Pickup Date:</string>
+    <string name="PickupLocation">Pickup Location</string>
+    <string name="PickupLocation1">Malabe</string>
+    <string name="model">Model</string>
+    <string name="model1">Audi</string>
+    <string name="PickupDate1">28/04/2021</string>
+    <string name="Start">START</string>
+    <string name="CarModel">Model:</string>
+    <string name="pastbook">PAST BOOKINGS</string>
+    <string name="ongoing">ON GOING</string>
+    <string name="trip">TRIP STARTED</string>
+    <string name="duration">Duration</string>
+    <string name="duration1">5 day</string>
+    <string name="end">END TRIP </string>
+    <string name="park">PARK</string>
+    <string name="lkr">LKR</string>
+    <string name="lkr1">5000</string>
+    <string name="Book">BOOKING</string>
+    <string name="tym">Time</string>
+    <string name="returns">Return Date</string>
+    <string name="pay">PAYMENT</string>
+    <string name="pay2">PAY NOW</string>
+    <string name="notFOund">Not Found</string>
+
+
+</resources>

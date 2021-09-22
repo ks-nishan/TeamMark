@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "161052808225",
+    "project_id": "teammark-98ac7",
+    "storage_bucket": "teammark-98ac7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161052808225:android:7627ccbdb274dfaa413f60",
+        "android_client_info": {
+          "package_name": "com.teammark.parkingmanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161052808225-96ljdln4moiiig3301310vfdmu1uitem.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2ADxBDKsFZMZ6FT1kREbaxl22-OhXPtI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161052808225-96ljdln4moiiig3301310vfdmu1uitem.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

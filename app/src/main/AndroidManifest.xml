@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.teammark">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission_WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="androidx.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TeamMark">
+        <activity android:name=".makePayment"></activity>
+        <activity android:name=".PromoteAD2" />
+        <activity android:name=".ShowActivity" />
+        <activity android:name=".EditAD" />
+        <activity android:name=".PromoteAD" />
+        <activity android:name=".Admin_PostAD" />
+        <activity android:name=".ForgotPasswordPage" />
+        <activity android:name=".RegisterPage" />
+        <activity android:name=".LoginPage" />
+        <activity android:name=".Admin_dashboad" />
+        <activity android:name=".advertisement_details" />
+        <activity android:name=".Advertisements" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

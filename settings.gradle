@@ -1,0 +1,4 @@
+rootProject.name = "TeamMark"
+include ':app'
+include ':Sanjay'
+include ':Gobi'

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/backgroundYellow"
+                android:layout_marginTop="20dp"
+                android:text="@string/ultimate_driving_machines"/>
+
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:src="@drawable/mad_logo_trans"
+                android:layout_width="82dp"
+                android:layout_height="82dp"/>
+        </RelativeLayout>
+
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="1"
+            android:columnOrderPreserved="false"
+            android:rowCount="1">
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                android:id="@+id/cardRentACar">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/txtEditAD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/edit_advertisement"
+                        android:textStyle="bold"
+                        android:textSize="25dp"/>
+
+                    <ImageView
+                        android:id="@+id/ImgPostAd"
+                        android:layout_width="220dp"
+                        android:layout_height="140dp"
+                        android:src="@drawable/blue_car"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/txtEditAD"/>
+
+
+
+                    <EditText
+                        android:id="@+id/editTxt1"
+                        android:layout_width="300dp"
+                        android:layout_height="35dp"
+                        android:drawableStart="@drawable/ic_title_24"
+                        android:drawableLeft="@drawable/ic_title_24"
+                        android:layout_below="@+id/ImgPostAd"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/custome_edit_txt"
+                        android:hint="@string/advertisement_title"/>
+
+                    <EditText
+                        android:id="@+id/editTxt2"
+                        android:layout_width="300dp"
+                        android:layout_height="35dp"
+                        android:drawableStart="@drawable/icocation_on_24"
+                        android:drawableLeft="@drawable/ic_title_24"
+                        android:layout_below="@+id/editTxt1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/custome_edit_txt"
+                        android:hint="@string/district"/>
+
+                    <EditText
+                        android:id="@+id/editTxt3"
+                        android:layout_width="300dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/custome_edit_txt"
+                        android:layout_below="@+id/editTxt2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:drawableStart="@drawable/ic_airline_seat_24"
+                        android:drawableEnd="@drawable/ic_drop_down_24"
+                        android:hint="@string/capasity"
+                        android:textSize="20dp"
+                        android:drawableLeft="@drawable/ic_airline_seat_24"
+                        android:drawableRight="@drawable/ic_drop_down_24" />
+
+                    <EditText
+                        android:id="@+id/editTxt4"
+                        android:layout_width="300dp"
+                        android:layout_height="35dp"
+                        android:drawableStart="@drawable/ic_camera_roll_24"
+                        android:layout_below="@+id/editTxt3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/custome_edit_txt"
+                        android:hint="@string/engine_cc"
+                        android:drawableLeft="@drawable/icocation_on_24" />
+
+                    <EditText
+                        android:id="@+id/editTxt5"
+                        android:layout_width="300dp"
+                        android:layout_height="35dp"
+                        android:drawableStart="@drawable/ic_electric_car_24"
+                        android:layout_below="@+id/editTxt4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/custome_edit_txt"
+                        android:hint="Fuel Type"
+                        android:drawableEnd="@drawable/ic_drop_down_24"
+                        android:drawableLeft="@drawable/icocation_on_24"
+                        android:drawableRight="@drawable/ic_drop_down_24" />
+
+                    <EditText
+                        android:id="@+id/editTxt6"
+                        android:layout_width="300dp"
+                        android:layout_height="35dp"
+                        android:drawableStart="@drawable/ic_phone_android_24"
+                        android:drawableLeft="@drawable/ic_title_24"
+                        android:layout_below="@+id/editTxt5"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/custome_edit_txt"
+                        android:hint="Mobile Number"/>
+
+                    <EditText
+                        android:id="@+id/editTxt7"
+                        android:layout_width="300dp"
+                        android:layout_height="35dp"
+                        android:drawableStart="@drawable/ic_baseline_local_phone_24"
+                        android:drawableLeft="@drawable/ic_title_24"
+                        android:layout_below="@+id/editTxt6"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/custome_edit_txt"
+                        android:hint="@string/land_line_number"/>
+
+
+                    <EditText
+                        android:id="@+id/editTxt8"
+                        android:layout_width="115dp"
+                        android:layout_height="35dp"
+                        android:drawableStart="@drawable/ic_monetization_on_24"
+                        android:layout_below="@+id/editTxt7"
+                        android:layout_centerHorizontal="false"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/custome_edit_txt"
+                        android:hint="@string/amount"
+                        android:drawableLeft="@drawable/ic_monetization_on_24" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/checkBox1"
+                        android:layout_toRightOf="@id/editTxt8"
+                        android:layout_below="@id/editTxt7"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtView9"
+                        android:text="@string/negotiable"
+                        android:layout_toRightOf="@id/checkBox1"
+                        android:layout_below="@id/editTxt7"
+                        android:layout_marginTop="28dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editTxt10"
+                        android:layout_width="300dp"
+                        android:layout_height="85dp"
+                        android:drawableStart="@drawable/ic_table_rows_24"
+                        android:drawableLeft="@drawable/ic_title_24"
+                        android:layout_below="@+id/editTxt8"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/custome_edit_txt"
+                        android:hint="@string/description"/>
+
+                    <Button
+                        android:id="@+id/btnEditAD"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/editTxt10"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="30dp"
+                        android:backgroundTint="@color/backgroundYellow"
+                        android:text="Update AD"/>
+
+                    <Button
+                        android:id="@+id/btnDeleteAD"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/editTxt10"
+                        android:layout_marginTop="20dp"
+                        android:layout_toRightOf="@+id/btnEditAD"
+                        android:layout_marginLeft="30dp"
+                        android:backgroundTint="@color/backgroundYellow"
+                        android:text="Delete AD"/>
+
+
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="all rights resived @2022"
+            android:textSize="14dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_marginLeft="138dp"
+            android:layout_marginTop="15dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:orientation="vertical"
+    tools:context=".CreateParkingAreaActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@color/orange_500"
+        android:layout_height="198dp">
+
+        <TextView
+            android:id="@+id/titleParking"
+            android:layout_marginTop="20dp"
+            android:textSize="26sp"
+            android:textColor="#FFF"
+            android:text="@string/parkingCreateTitle"
+            android:textAlignment="center"
+            android:layout_marginBottom="28dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            android:id="@+id/prgCreateArea"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <View
+            android:layout_marginTop="20dp"
+            android:background="@color/orange_500"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bg_formcard"
+            android:orientation="vertical"
+            android:paddingTop="22dp"
+            android:paddingBottom="22dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgParking"
+                    android:layout_width="175dp"
+                    android:layout_height="175dp"
+                    android:background="@drawable/bg_imgparking"
+                    android:src="@drawable/imgadd"
+                    android:layout_gravity="center_horizontal"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/lblTitle"
+                    android:textColor="@color/blue_800"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edtTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_inputtask"
+                    android:hint="@string/edtTitle"
+                    android:inputType="text"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/blue_600"
+                    android:textColorHint="#B5B5B5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/lblAddress"
+                    android:textColor="@color/blue_800"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_inputtask"
+                    android:hint="@string/edtAddress"
+                    android:inputType="text"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/blue_600"
+                    android:textColorHint="#B5B5B5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblVehicleType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/lblVehicleType"
+                    android:textColor="@color/blue_800"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/chkTypeBike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="55dp"
+                    android:text="@string/chkTypeBike"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/chkTypeCar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:text="@string/chkTypeCar"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblSlots"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/lblSlots"
+                    android:textColor="@color/blue_800"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edtCountBikeSlots"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_inputtask"
+                        android:hint="@string/edtCountBikeSlots"
+                        android:inputType="text"
+                        android:paddingLeft="12dp"
+                        android:textColor="@color/blue_600"
+                        android:textColorHint="#B5B5B5" />
+
+                    <EditText
+                        android:id="@+id/edtCountCarSlots"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_inputtask"
+                        android:hint="@string/edtCountCarSlots"
+                        android:inputType="text"
+                        android:paddingLeft="12dp"
+                        android:textColor="@color/blue_600"
+                        android:textColorHint="#B5B5B5" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/lblFee"
+                    android:textColor="@color/blue_800"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edtFeeBike"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_inputtask"
+                        android:hint="@string/edtFeeBike"
+                        android:inputType="text"
+                        android:paddingLeft="12dp"
+                        android:textColor="@color/blue_600"
+                        android:textColorHint="#B5B5B5" />
+
+                    <EditText
+                        android:id="@+id/edtFeeCar"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_inputtask"
+                        android:hint="@string/edtFeeCar"
+                        android:inputType="text"
+                        android:paddingLeft="12dp"
+                        android:textColor="@color/blue_600"
+                        android:textColorHint="#B5B5B5" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblEVFacility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lblEVFacility"
+                    android:textColor="@color/blue_800"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"/>
+
+                <RadioGroup
+                    android:id="@+id/radioGroupEV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radEVYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="75dp"
+                        android:checked="false"
+                        android:text="@string/radEVYes"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/radEVNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:checked="false"
+                        android:text="@string/radEVNo"
+                        android:textSize="16sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblWatt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/lblWatt"
+                    android:textColor="@color/blue_800"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chkWattMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chkWattMin"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkWattMed"
+                        android:layout_marginLeft="65dp"
+                        android:layout_marginRight="65dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chkWattMed"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkWattMax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chkWattMax"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblCon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/lblCon"
+                    android:textColor="@color/blue_800"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <CheckBox
+                        android:id="@+id/chkConTypeTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chkConTypeTwo"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkConCombo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="65dp"
+                        android:layout_marginRight="65dp"
+                        android:text="@string/chkConCombo"
+                        android:textSize="16sp" />
+
+                    <CheckBox
+                        android:id="@+id/chkConCHA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chkConCHA"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCreateArea"
+                android:layout_marginTop="20dp"
+                android:text="@string/btnCreate"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_btncreate"
+                app:backgroundTint="@color/orange_500"
+                android:textSize="22sp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"/>
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_marginTop="14dp"
+                android:text="@string/btnCancel"
+                android:textColor="@color/blue_800"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_btncancel"
+                app:backgroundTint="#DDDDDD"
+                android:textSize="22sp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

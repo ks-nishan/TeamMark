@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#f9AA33">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:src="@drawable/mad_logo_trans" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mark Rents"
+                android:textStyle="bold|italic"
+                android:layout_toRightOf="@+id/imgLogo"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"/>
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/user_icon"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                />
+
+            <EditText
+                android:id="@+id/editTxtSerch"
+                android:layout_width="330dp"
+                android:layout_height="40dp"
+                android:background="@drawable/custome_edit_txt"
+                android:hint="        Search"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/logo"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="59dp"
+                android:src="@drawable/serch_icon"
+                android:layout_marginLeft="5dp"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Browse By Brands"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"/>
+
+
+        //-----------------------horizontal round Brands card
+        start--------------------------------------
+
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="163dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/HorCard1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:backgroundTint="#ffffff"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/card1Img"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/audi_logo" />
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                //-------------------horizontal card 2 start-----------------------
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/HorCard2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:backgroundTint="#ffffff"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/card2Img"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/benz_logo" />
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                //-------------------horizontal card 3 start-----------------------
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/HorCard3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:backgroundTint="#ffffff"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        ho
+
+                        <ImageView
+                            android:id="@+id/card3Img"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/bmw_logo" />
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                //-------------------horizontal card 4 start-----------------------
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/HorCard4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:backgroundTint="#ffffff"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/card4Img"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/toyota_logo" />
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                //-------------------horizontal card 5start-----------------------
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/HorCard5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    android:backgroundTint="#ffffff"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/card5Img"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/honda_logo" />
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Economycal Vehicles"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"/>
+
+
+    //-------------horizontal Economycal cars card start---------------------------------
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="163dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp"
+                    android:id="@+id/Economycard1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/economyImg1"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/vitz" />
+
+                        <TextView
+                            android:id="@+id/economyCard1Txt1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="6dp"
+                            android:text="Rent a Toyota Vitz"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@+id/economyImg1"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/economyCard1Txt1"
+                            android:text="LKR.2500/day"
+                            android:layout_toRightOf="@+id/economyImg1"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle="bold"/>
+
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp"
+                    android:id="@+id/Economycard2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/economyImg2"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/alto" />
+
+                        <TextView
+                            android:id="@+id/economyCard1Txt2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="6dp"
+                            android:text="Rent a Suzuki Alto"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@+id/economyImg2"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/economyCard1Txt2"
+                            android:text="LKR.2000/day"
+                            android:layout_toRightOf="@+id/economyImg2"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle="bold"/>
+
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp"
+                    android:id="@+id/Economycard3">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/economyImg3"
+                            android:layout_width="150dp"
+                            android:layout_height="120dp"
+                            android:src="@drawable/aqua" />
+
+                        <TextView
+                            android:id="@+id/economyCard1Txt3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginLeft="6dp"
+                            android:text="Rent a Toyota Aqua"
+                            android:textColor="@color/black"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@+id/economyImg3"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/economyCard1Txt3"
+                            android:text="LKR.3000/day"
+                            android:layout_toRightOf="@+id/economyImg3"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle="bold"/>
+
+
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Displaying 142 cars  "
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"/>
+
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="1"
+            android:columnOrderPreserved="false"
+            android:rowCount="3">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                android:id="@+id/card1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/blue_car" />
+
+                    <TextView
+                        android:id="@+id/card1Txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:text="Mazda z for Rent"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@+id/img1"/>
+
+                    <TextView
+                        android:id="@+id/card1Txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card1Txt1"
+                        android:layout_toRightOf="@+id/img1"
+                        android:text="4 Person"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/card1txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card1Txt2"
+                        android:layout_toRightOf="@+id/img1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:text="Gampaha"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:id="@+id/card1LocationImg"
+                        android:src="@drawable/location_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card1Txt2"
+                        android:layout_toRightOf="@+id/img1"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <ImageView
+                        android:id="@+id/card1PersonImg"
+                        android:src="@drawable/person_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card1Txt1"
+                        android:layout_toRightOf="@+id/img1"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <ImageView
+                        android:id="@+id/card1MoneyImg"
+                        android:src="@drawable/money_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card1txt3"
+                        android:layout_toRightOf="@+id/img1"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LKR.3000/day"
+                        android:layout_below="@id/card1txt3"
+                        android:layout_toRightOf="@id/img1"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            //2nd card stsrting
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                android:id="@+id/card2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/black_sport_bike" />
+
+                    <TextView
+                        android:id="@+id/card2Txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:text="Yamaha R1 for Rent"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@+id/img2"/>
+
+                    <TextView
+                        android:id="@+id/card2Txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card2Txt1"
+                        android:layout_toRightOf="@+id/img2"
+                        android:text="2 Person"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/card2txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card2Txt2"
+                        android:layout_toRightOf="@+id/img2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:text="Badulla"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:id="@+id/card2LocationImg"
+                        android:src="@drawable/location_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card2Txt2"
+                        android:layout_toRightOf="@+id/img2"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <ImageView
+                        android:id="@+id/card2PersonImg"
+                        android:src="@drawable/person_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card2Txt1"
+                        android:layout_toRightOf="@+id/img2"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <ImageView
+                        android:id="@+id/card2MoneyImg"
+                        android:src="@drawable/money_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card2txt3"
+                        android:layout_toRightOf="@+id/img2"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LKR.2000/day"
+                        android:layout_below="@id/card2txt3"
+                        android:layout_toRightOf="@id/img2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            //3rd card Starting
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                android:id="@+id/card3">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/img3"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/electric_jeep" />
+
+                    <TextView
+                        android:id="@+id/card3Txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:text="Electric Jeep for Rent"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@+id/img3"/>
+
+                    <TextView
+                        android:id="@+id/card3Txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card3Txt1"
+                        android:layout_toRightOf="@+id/img3"
+                        android:text="4 Person"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/card3txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card3Txt2"
+                        android:layout_toRightOf="@+id/img3"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:text="Gampaha"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:id="@+id/card3LocationImg"
+                        android:src="@drawable/location_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card3Txt2"
+                        android:layout_toRightOf="@+id/img3"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <ImageView
+                        android:id="@+id/card3PersonImg"
+                        android:src="@drawable/person_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card3Txt1"
+                        android:layout_toRightOf="@+id/img3"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <ImageView
+                        android:id="@+id/card3MoneyImg"
+                        android:src="@drawable/money_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card3txt3"
+                        android:layout_toRightOf="@+id/img3"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LKR.3000/day"
+                        android:layout_below="@id/card3txt3"
+                        android:layout_toRightOf="@id/img3"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            //4th card starting
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                android:id="@+id/card4">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/img4"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/white_scorter" />
+
+                    <TextView
+                        android:id="@+id/card4Txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:text="Electric Scortey for Rent"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@+id/img4"/>
+
+                    <TextView
+                        android:id="@+id/card4Txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card4Txt1"
+                        android:layout_toRightOf="@+id/img4"
+                        android:text="4 Person"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/card4txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card4Txt2"
+                        android:layout_toRightOf="@+id/img4"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:text="Gampaha"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:id="@+id/card4LocationImg"
+                        android:src="@drawable/location_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card4Txt2"
+                        android:layout_toRightOf="@+id/img4"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <ImageView
+                        android:id="@+id/card4PersonImg"
+                        android:src="@drawable/person_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card4Txt1"
+                        android:layout_toRightOf="@+id/img4"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <ImageView
+                        android:id="@+id/card4MoneyImg"
+                        android:src="@drawable/money_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card4txt3"
+                        android:layout_toRightOf="@+id/img4"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LKR.3000/day"
+                        android:layout_below="@id/card4txt3"
+                        android:layout_toRightOf="@id/img4"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            //5th card starting
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                android:id="@+id/card5">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/img5"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/red_car" />
+
+                    <TextView
+                        android:id="@+id/card5Txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:text="Audi for Rent"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@+id/img5"/>
+
+                    <TextView
+                        android:id="@+id/card5Txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card5Txt1"
+                        android:layout_toRightOf="@+id/img5"
+                        android:text="4 Person"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/card5txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card5Txt2"
+                        android:layout_toRightOf="@+id/img5"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:text="Kandy"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:id="@+id/card5LocationImg"
+                        android:src="@drawable/location_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card5Txt2"
+                        android:layout_toRightOf="@+id/img5"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <ImageView
+                        android:id="@+id/card5PersonImg"
+                        android:src="@drawable/person_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card5Txt1"
+                        android:layout_toRightOf="@+id/img5"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <ImageView
+                        android:id="@+id/card5MoneyImg"
+                        android:src="@drawable/money_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card5txt3"
+                        android:layout_toRightOf="@+id/img5"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LKR.6000/day"
+                        android:layout_below="@id/card5txt3"
+                        android:layout_toRightOf="@id/img5"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            //6th card starting
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                android:id="@+id/card6">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/img6"
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/volvo_car" />
+
+                    <TextView
+                        android:id="@+id/card6Txt1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:text="Volvo jeep for Rent"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@+id/img6"/>
+
+                    <TextView
+                        android:id="@+id/card6Txt2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card6Txt1"
+                        android:layout_toRightOf="@+id/img6"
+                        android:text="2 Person"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/card6txt3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/card6Txt2"
+                        android:layout_toRightOf="@+id/img6"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:text="Jaffna"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                    <ImageView
+                        android:id="@+id/card6LocationImg"
+                        android:src="@drawable/location_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card6Txt2"
+                        android:layout_toRightOf="@+id/img6"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <ImageView
+                        android:id="@+id/card6PersonImg"
+                        android:src="@drawable/person_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card6Txt1"
+                        android:layout_toRightOf="@+id/img6"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <ImageView
+                        android:id="@+id/card6MoneyImg"
+                        android:src="@drawable/money_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_below="@id/card6txt3"
+                        android:layout_toRightOf="@+id/img6"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginTop="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LKR.1500/day"
+                        android:layout_below="@id/card6txt3"
+                        android:layout_toRightOf="@id/img6"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="36dp"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="all rights resived @2022"
+            android:textSize="14dp"
+            android:textStyle="italic"
+            android:textColor="@color/black"
+            android:layout_marginLeft="138dp"
+            android:layout_marginTop="22dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
