@@ -14,20 +14,19 @@
         >
 
         <RelativeLayout
-            android:layout_marginTop="32dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:padding="6dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#f9AA33"
             >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
+                android:textSize="25dp"
                 android:textStyle="bold"
-                android:textColor="#f9AA33"
-                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="13dp"
                 android:text="@string/ultimate_driving_machines"/>
 
             <ImageView
@@ -82,7 +81,7 @@
                        android:layout_width="240dp"
                        android:layout_height="60dp"
                        android:text="@string/take_photo"
-                       android:backgroundTint="#f9AA33"
+                       android:backgroundTint="@color/buttonGray"
                        android:layout_toRightOf="@+id/ImgPostAd"
                        android:layout_marginLeft="30dp"
                        android:layout_marginTop="6dp"
@@ -244,7 +243,7 @@
                         android:layout_below="@id/editTxt10"
                         android:layout_marginTop="20dp"
                         android:layout_marginLeft="30dp"
-                        android:backgroundTint="#f9AA33"
+                        android:backgroundTint="@color/buttonGray"
                         android:text="@string/post_ad"/>
 
                     <Button
@@ -254,7 +253,7 @@
                         android:layout_below="@id/btnPostAD"
                         android:layout_marginTop="20dp"
                         android:layout_marginLeft="30dp"
-                        android:backgroundTint="#f9AA33"
+                        android:backgroundTint="@color/buttonGray"
                         android:text="Show All "/>
 
                     <Button
@@ -264,7 +263,7 @@
                         android:layout_below="@id/btnShow"
                         android:layout_marginTop="20dp"
                         android:layout_marginLeft="30dp"
-                        android:backgroundTint="#f9AA33"
+                        android:backgroundTint="@color/buttonGray"
                         android:text="Promote AD"/>
 
 
