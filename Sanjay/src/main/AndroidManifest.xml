@@ -2,29 +2,22 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myproject">
 
-
-
-
     <application
-
-
         android:allowBackup="true"
         android:label="@string/app_name"
-        android:theme="@style/Theme.TeamMark"
-        >
-
-
-
-
-        <activity android:name=".Payment" />
-        <activity android:name=".Booking" >
-
+        android:theme="@style/Theme.TeamMark">
+        <activity android:name=".showAllPast"  android:label="ALL BOOKINGS"></activity>
+        <activity android:name=".Payment" android:label="" />
+        <activity android:name=".Booking" android:label="">
         </activity>
-        <activity android:name=".PastOrder" />
-        <activity android:name=".Trip" />
-        <activity android:name=".OnGoing" />
-        <activity android:name=".EditProfile" />
-        <activity android:name=".Profile">
+        <activity android:name=".PastOrder"  android:label="SEARCH BOOKINGS" />
+        <activity android:name=".Trip"  android:label="" />
+        <activity android:name=".OnGoing"  android:label=""/>
+        <activity android:name=".EditProfile"  android:label="Edit profile"/>
+        <activity android:name=".Profile" android:label="My profile">
+
+
+
 
         </activity>
     </application>
