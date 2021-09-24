@@ -44,7 +44,7 @@ public class Admin_dashboad extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.cardParkingSloat:
-                i = new Intent(this,EditAD.class);
+                i = new Intent(this,ShowActivity.class);
                 startActivity(i);
                 break;
 

@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()){
             case R.id.cardRentACar:
-                i = new Intent(this,Advertisements.class);
+                i = new Intent(this,ShowActivity.class);
                 startActivity(i);
                 break;
 

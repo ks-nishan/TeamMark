@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TeamMark">
-        <activity android:name=".makePayment"></activity>
+        <activity android:name=".makePayment" />
         <activity android:name=".PromoteAD2" />
         <activity android:name=".ShowActivity" />
         <activity android:name=".EditAD" />
