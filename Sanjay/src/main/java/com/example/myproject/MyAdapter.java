@@ -31,6 +31,8 @@ public class MyAdapter  extends RecyclerView.Adapter<MyAdapter.myViewHolder> {
 
         this.activity = activity;
         this.modelList = modelList;
+
+
     }
 
 
@@ -67,7 +69,10 @@ public class MyAdapter  extends RecyclerView.Adapter<MyAdapter.myViewHolder> {
     @NotNull
     @Override
     public myViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
+
         View v = LayoutInflater.from(activity).inflate(R.layout.item,parent,false);
+
+
         return new myViewHolder(v);
     }
 
