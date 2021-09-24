@@ -50,6 +50,8 @@
         android:background="@drawable/input"
         android:drawableLeft="@drawable/ic_baseline_lock_24" />
 
+
+
     <TextView
         android:id="@+id/txtforgotPassword"
         android:layout_width="match_parent"

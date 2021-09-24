@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardElevation="8dp"
-    android:backgroundTint="#fff44f"
+    android:layout_margin="13dp"
+    android:backgroundTint="#4A6572"
     app:cardCornerRadius="15dp"
-    android:layout_margin="13dp">
+    app:cardElevation="8dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,165 +18,162 @@
 
         <ImageView
             android:id="@+id/img1"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="122dp"
+            android:layout_height="200dp"
             android:layout_marginTop="70px"
-            android:src="@drawable/benzz_adobespark" />
+            android:src="@drawable/white_benz" />
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Title"
-            android:textStyle="bold"
-            android:textSize="24sp"
-            android:textColor="@color/black"
-            android:padding="8dp"
             android:id="@+id/title_text"
-            android:layout_toRightOf="@+id/img1"/>
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img1"
+            android:padding="8dp"
+            android:text="Title"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/card1LocationImg"
-            android:src="@drawable/location_icon"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_below="@id/title_text"
-            android:layout_toRightOf="@+id/img1"
             android:layout_marginLeft="6dp"
-            android:layout_marginTop="6dp"/>
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/img1"
+            android:src="@drawable/location_icon" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="District"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:padding="8dp"
-        android:id="@+id/district_text"
-        android:layout_below="@id/title_text"
-        android:layout_toRightOf="@+id/card1LocationImg"/>
+        <TextView
+            android:id="@+id/district_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_text"
+            android:layout_toRightOf="@+id/card1LocationImg"
+            android:padding="8dp"
+            android:text="District"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/card1PersonImg"
-            android:src="@drawable/person_icon"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_below="@id/district_text"
-            android:layout_toRightOf="@+id/img1"
             android:layout_marginLeft="6dp"
-            android:layout_marginTop="6dp"/>
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/img1"
+            android:src="@drawable/person_icon" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Persons"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:padding="8dp"
-        android:id="@+id/person_text"
-        android:layout_below="@id/district_text"
-        android:layout_toRightOf="@+id/card1PersonImg"/>
+        <TextView
+            android:id="@+id/person_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/district_text"
+            android:layout_toRightOf="@+id/card1PersonImg"
+            android:padding="8dp"
+            android:text="Persons"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/card1MoneyImg"
-            android:src="@drawable/money_icon"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_below="@id/person_text"
-            android:layout_toRightOf="@+id/img1"
             android:layout_marginLeft="6dp"
-            android:layout_marginTop="6dp"/>
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/img1"
+            android:src="@drawable/money_icon" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Amount"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:padding="8dp"
-        android:id="@+id/amount_text"
-        android:layout_below="@+id/person_text"
-        android:layout_toRightOf="@+id/card1MoneyImg"/>
+        <TextView
+            android:id="@+id/amount_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/person_text"
+            android:layout_toRightOf="@+id/card1MoneyImg"
+            android:padding="8dp"
+            android:text="Amount"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/card1phone"
-            android:src="@drawable/mobile_icon"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_below="@id/amount_text"
-            android:layout_toRightOf="@+id/img1"
             android:layout_marginLeft="6dp"
-            android:layout_marginTop="6dp"/>
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/img1"
+            android:src="@drawable/mobile_icon" />
 
         <TextView
+            android:id="@+id/mobile_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mobile"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:padding="8dp"
-            android:id="@+id/mobile_text"
             android:layout_below="@+id/amount_text"
-            android:layout_toRightOf="@+id/card1phone"/>
+            android:layout_toRightOf="@+id/card1phone"
+            android:padding="8dp"
+            android:text="Mobile"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/card1engine"
-            android:src="@drawable/engineering"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_below="@id/mobile_text"
-            android:layout_toRightOf="@+id/img1"
             android:layout_marginLeft="6dp"
-            android:layout_marginTop="6dp"/>
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/img1"
+            android:src="@drawable/engineering" />
 
         <TextView
+            android:id="@+id/engine_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Engine"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:padding="8dp"
-            android:id="@+id/engine_text"
             android:layout_below="@id/mobile_text"
-            android:layout_toRightOf="@+id/card1engine"/>
+            android:layout_toRightOf="@+id/card1engine"
+            android:padding="8dp"
+            android:text="Engine"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/delImg"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:src="@drawable/leftmessage"
-            android:rotation="180"/>
+            android:rotation="180"
+            android:src="@drawable/leftmessage" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/delImg"
             android:text="Delete"
-            android:textStyle="italic"
-            android:layout_toRightOf="@+id/delImg"/>
+            android:textColor="@color/white"
+            android:textStyle="italic" />
 
         <ImageView
             android:id="@+id/edtImg"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:src="@drawable/redo"
-            android:layout_toRightOf="@+id/engine_text"
-            android:layout_below="@+id/mobile_text"
-            android:layout_marginLeft="185px"
-            android:rotation="180"/>
+            android:layout_toRightOf="@+id/title_text"
+            android:rotation="180"
+            android:src="@drawable/redo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/engine_text"
-            android:layout_marginLeft="5px"
-            android:layout_marginTop="-30dp"
-            android:layout_marginRight="-80dp"
+            android:layout_marginTop="5dp"
             android:layout_toLeftOf="@+id/edtImg"
             android:text="Update"
+            android:textColor="@color/white"
             android:textStyle="italic" />
 
 
