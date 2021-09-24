@@ -2,6 +2,7 @@ package com.example.myproject;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -43,11 +44,17 @@ private List<Model> list;
         list = new ArrayList<>();
         adapter = new MyAdapter(this, list);
         recyclerView.setAdapter(adapter);
+
+        ItemTouchHelper touchHelper = new ItemTouchHelper(new TouchHelper(adapter));
+        touchHelper.attachToRecyclerView(recyclerView);
         showData();
+
+
+
 
     }
 
-    private void showData() {
+  public   void showData() {
 
         db.collection("Vehicle_Booking").get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
