@@ -96,7 +96,7 @@ public class Profile extends AppCompatActivity {
         ViewAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myinten = new Intent(Profile.this ,PastOrder.class);
+                Intent myinten = new Intent(Profile.this ,showAllPast.class);
                 startActivity(myinten);
             }
         });
