@@ -97,6 +97,7 @@ public class Trip extends AppCompatActivity {
                                 String Return = snapshot.getString("ReturnDate");
                                 try {
                                    int d = durationCalc(pick,Return);
+
                                   String duration = String.valueOf(d) ;
                                   T2.setText(duration + " Days");
 
@@ -155,7 +156,7 @@ btn2.setOnClickListener(new View.OnClickListener() {
 
     }
 
-    private int durationCalc(String pick, String aReturn) throws ParseException {
+    public int durationCalc(String pick, String aReturn) throws ParseException {
 
         String myFormat = "MM/dd/yy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
