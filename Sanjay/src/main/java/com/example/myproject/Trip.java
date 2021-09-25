@@ -127,7 +127,17 @@ public class Trip extends AppCompatActivity {
 btn2.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
+        db.collection("On_Going").document(Email).delete()
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()){
 
+                        }else{
+
+                        }
+                    }
+                });
 
 
 
