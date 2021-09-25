@@ -52,7 +52,7 @@ public class CalculateParkingPaymentActivity extends AppCompatActivity {
                 int hours = Integer.parseInt(edtHours.getText().toString());
                 int minutes = Integer.parseInt(edtMinutes.getText().toString());
 
-                int time = (hours * 60) + minutes;
+                int time = hours + (minutes/60);
 
                 if(radBike.isChecked()){
                     totalPayment += feeBike;
@@ -65,15 +65,15 @@ public class CalculateParkingPaymentActivity extends AppCompatActivity {
                 totalPayment *= time;
 
                 if(chkWattMax.isChecked()){
-                    totalPayment += 500;
+                    totalPayment += 50;
                 }
 
                 if(chkWattMed.isChecked()){
-                    totalPayment += 250;
+                    totalPayment += 37.5;
                 }
 
                 if(chkWattMin.isChecked()){
-                    totalPayment += 100;
+                    totalPayment += 25;
                 }
 
                 edtTotal.setText(totalPayment.toString());
