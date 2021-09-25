@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:background="@color/yellow"
+    android:elevation="100dp"
+    android:layout_margin="13dp"
+   >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:background="@color/yellow"
+        >
+
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginLeft="15dp"
+            android:text="@string/PickupDate"
+            android:textSize="20dp"
+            android:drawableLeft="@drawable/date2"
+
+            />
+        <TextView
+            android:layout_width="150dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:textSize="25dp"
+            android:id="@+id/PastOrder_Date2"
+            >
+
+        </TextView>
+        <View
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="38dp"
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:background="@color/gray1"/>
+        <TextView
+            android:layout_marginTop="95dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginLeft="10dp"
+            android:text="Booking ID"
+            android:textSize="20dp"
+            android:drawableLeft="@drawable/name"
+
+            />
+        <EditText
+            android:layout_width="150dp"
+            android:layout_marginTop="85dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="190dp"
+            android:id="@+id/PastOrder_bookingId2"
+            android:focusable="false"
+            ></EditText>
+
+        <TextView
+            android:layout_marginTop="145dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/Email"
+            android:textSize="20dp"
+            android:drawableLeft="@drawable/mail"
+            />
+        <EditText
+            android:layout_width="150dp"
+            android:layout_marginTop="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="190dp"
+            android:id="@+id/PastOrder_phone2"
+            android:focusable="false"
+            ></EditText>
+        <TextView
+            android:layout_marginTop="195dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginLeft="10dp"
+            android:text="@string/CarModel"
+            android:textSize="20dp"
+            android:drawableLeft="@drawable/car"></TextView>
+        "
+
+        />
+        <EditText
+            android:layout_width="150dp"
+            android:layout_marginTop="185dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="190dp"
+            android:id="@+id/PastOrder_Model2"
+            android:focusable="false"
+            ></EditText>
+        <TextView
+            android:layout_marginTop="245dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginLeft="10dp"
+            android:text="Location"
+            android:textSize="20dp"
+            android:drawableLeft="@drawable/loc"></TextView>
+
+
+        />
+        <EditText
+            android:layout_width="150dp"
+            android:layout_marginTop="235dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="190dp"
+            android:id="@+id/PastOrder_Location2"
+            android:focusable="false"
+
+            ></EditText>
+
+        <View
+            android:layout_marginTop="290dp"
+            android:layout_marginLeft="38dp"
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:background="@color/gray1"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_marginTop="298dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="25dp"
+            android:text="@string/lkr"
+            ></TextView>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_marginTop="298dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:textSize="25dp"
+            android:id="@+id/PastOrder_Total2"
+            ></TextView>
+
+
+
+    </RelativeLayout>
+
+
+    >
+
+</androidx.cardview.widget.CardView>

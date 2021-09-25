@@ -36,7 +36,7 @@ public class Booking extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
 
-
+//checking
 
         EditText editText6 = findViewById(R.id.Car_Model);
         editText6.setText(Model);

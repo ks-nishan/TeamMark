@@ -2,26 +2,34 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myproject">
 
-
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
 
 
         android:allowBackup="true"
-        android:label="@string/app_name">
+        android:label="@string/app_name"
+        android:theme="@style/Theme.TeamMark"
 
+        >
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC-tP358xdUf0SrQZeNGPMG5l3oPWqU4lQ"
+            ></meta-data>
 
-        <activity android:name=".Payment" />
-        <activity android:name=".Booking" >
-
+        <activity android:name=".showAllPast"  android:label="ALL BOOKINGS"></activity>
+        <activity android:name=".Payment" android:label="" />
+        <activity android:name=".Booking" android:label="">
         </activity>
-        <activity android:name=".PastOrder" />
-        <activity android:name=".Trip" />
-        <activity android:name=".OnGoing" />
-        <activity android:name=".EditProfile" />
-        <activity android:name=".Profile">
+        <activity android:name=".PastOrder"  android:label="SEARCH BOOKINGS" />
+        <activity android:name=".Trip"  android:label=" Your Trip " />
+        <activity android:name=".OnGoing"  android:label=""/>
+        <activity android:name=".EditProfile"  android:label="Edit profile"/>
+        <activity android:name=".Profile" android:label="My profile">
+
 
         </activity>
     </application>
