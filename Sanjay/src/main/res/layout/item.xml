@@ -144,19 +144,7 @@ android:background="@color/yellow"
             android:id="@+id/PastOrder_Total2"
             ></TextView>
 
-        <Button
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:id="@+id/PastOrder_Deletebutton"
-            android:layout_marginLeft="300dp"
-            android:layout_marginTop="298dp"
-            android:backgroundTint="@color/transparent"
-            android:drawableBottom="@drawable/delete"
 
-            >
-
-
-        </Button>
 
     </RelativeLayout>
 
