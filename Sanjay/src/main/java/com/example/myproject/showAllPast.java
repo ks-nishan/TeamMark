@@ -63,7 +63,10 @@ private List<Model> list;
                         list.clear();
                         for (DocumentSnapshot snapshot : task.getResult()) {
 
-                            Model model = new Model(snapshot.getString("PickupDate").toString(), snapshot.getString("BookingID").toString(), snapshot.getString("Total").toString(),snapshot.getString("Email").toString(),snapshot.getString("Model").toString(),snapshot.getString("Location").toString());
+                            Model model = new Model(snapshot.getString("PickupDate").toString(),
+                                    snapshot.getString("BookingID").toString(), snapshot.getString("Total").toString(),
+                                    snapshot.getString("Email").toString(),snapshot.getString("Model").toString(),
+                                    snapshot.getString("Location").toString());
                             list.add(model);
                         }
                         adapter.notifyDataSetChanged();
