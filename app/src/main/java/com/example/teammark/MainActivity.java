@@ -7,7 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.myproject.Profile;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -15,10 +17,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public CardView card1,card2,card3,card4,card5,card6;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         card1 = (CardView)findViewById(R.id.cardRentACar);
         card2 = (CardView)findViewById(R.id.cardParkingSloat);
@@ -42,7 +47,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()){
             case R.id.cardRentACar:
-                i = new Intent(this,ShowActivity.class);
+                String EMAIL;
+                Intent intent2 = getIntent();
+                EMAIL = intent2.getStringExtra("EMAIL");
+                Toast.makeText(this, EMAIL, Toast.LENGTH_SHORT).show();
+                i = new Intent (this, ShowActivity.class);
+                i.putExtra("EMAIL",EMAIL);
                 startActivity(i);
                 break;
 
@@ -52,7 +62,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.cardResavation:
-                i = new Intent (this,LoginPage.class);
+                //email Passing
+                String Email;
+                Intent intent = getIntent();
+                Email = intent.getStringExtra("EMAIL");
+                Toast.makeText(this, Email, Toast.LENGTH_SHORT).show();
+                i = new Intent (this, Profile.class);
+                i.putExtra("EMAIL",Email);
                 startActivity(i);
                 break;
 

@@ -11,7 +11,7 @@ public class TouchHelper extends ItemTouchHelper.SimpleCallback {
 
     private Myadapter adapter;
     public TouchHelper(Myadapter adapter) {
-        super(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT);
+        super(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT );
         this.adapter = adapter;
     }
 
@@ -26,9 +26,10 @@ public class TouchHelper extends ItemTouchHelper.SimpleCallback {
         if(direction == ItemTouchHelper.LEFT){
             adapter.updateData(position);
             adapter.notifyDataSetChanged();
-        }else{
+        }else {
             adapter.deleteData(position);
         }
+
     }
 
     @Override
