@@ -19,14 +19,13 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 public class Profile extends AppCompatActivity {
     private FirebaseFirestore db;
-
-
+    static String Email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         db = FirebaseFirestore.getInstance();
-        String Email;
+
         Intent intent = getIntent();
         Email = intent.getStringExtra("EMAIL");
         EditText input1, input2, input3, input4;
@@ -35,7 +34,6 @@ public class Profile extends AppCompatActivity {
         input1 = findViewById(R.id.P_Username);
         input2 = findViewById(R.id.P_Email);
         input3 = findViewById(R.id.P_Phone);
-        input3.setText(Email);
         input4 = findViewById(R.id.P_Password);
         input5 = findViewById(R.id.P_Username2);
         btn1 = findViewById(R.id.EditButton_P);

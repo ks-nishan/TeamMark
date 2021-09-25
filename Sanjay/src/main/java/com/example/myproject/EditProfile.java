@@ -90,6 +90,7 @@ public class EditProfile extends AppCompatActivity {
                             if (task.isSuccessful()){
                                 Toast.makeText(EditProfile.this,"Updated",Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(EditProfile.this, Profile.class);
+                                intent.putExtra("EMAIL",email);
                                 startActivity(intent);
                             }
                         }

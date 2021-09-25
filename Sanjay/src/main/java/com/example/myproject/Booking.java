@@ -28,9 +28,7 @@ public class Booking extends AppCompatActivity implements
     final Calendar myCalendar = Calendar.getInstance();
     final Calendar myCalendar2 = Calendar.getInstance();
     static String Email;
-    static  String Model;
-
-
+    static String Model;
 
 
     @Override
@@ -123,7 +121,7 @@ public class Booking extends AppCompatActivity implements
 
             @Override
             public void onClick(View v) {
-
+//calculation for vehicle rental
 
                 CalculateMoney obj = new CalculateMoney();
                 try {
@@ -160,36 +158,28 @@ public class Booking extends AppCompatActivity implements
         btn2 = findViewById(R.id.Reserve_Button);
 
 
+        btn2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
 
 
-            btn2.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
+                StartReserve();
 
 
-StartReserve();
+            }
 
 
-                }
-
-
-            });
-
-
-
-
-
-
+        });
 
 
     }
 
-public void StartReserve () {
-    EditText edittext4 = findViewById(R.id.ReturnDate);
-    EditText edittext3 = findViewById(R.id.PickUpDate);
-    TextView input4 = findViewById(R.id.Calculate_Total);
-    String total = input4.getText().toString();
+    public void StartReserve() {
+        EditText edittext4 = findViewById(R.id.ReturnDate);
+        EditText edittext3 = findViewById(R.id.PickUpDate);
+        TextView input4 = findViewById(R.id.Calculate_Total);
+        String total = input4.getText().toString();
 
 
         if (!total.isEmpty()) {
@@ -202,15 +192,13 @@ public void StartReserve () {
             intent.putExtra("MODEL", Model);
             intent.putExtra("EMAIL", Email);
             startActivity(intent);
-        }
-        else {
+        } else {
 
             Toast.makeText(Booking.this, "Check Your Dates", Toast.LENGTH_SHORT).show();
 
 
         }
-}
-
+    }
 
 
     @Override

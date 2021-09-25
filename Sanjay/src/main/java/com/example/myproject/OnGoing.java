@@ -57,20 +57,16 @@ public class OnGoing extends AppCompatActivity {
                 });
 
 
-btn1.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        Intent intent = new Intent(OnGoing.this, Trip.class);
-        intent.putExtra("EMAIL",Email);
-        startActivity(intent);
+                Intent intent = new Intent(OnGoing.this, Trip.class);
+                intent.putExtra("EMAIL", Email);
+                startActivity(intent);
 
-    }
-});
-
-
-
-
+            }
+        });
 
 
     }
