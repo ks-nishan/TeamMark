@@ -46,15 +46,6 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
 
         forgotPassword = (TextView)findViewById(R.id.txtforgotPassword);
         forgotPassword.setOnClickListener(this);
-
-        testBtn = (Button)findViewById(R.id.testBtn);
-        testBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginPage.this, Profile.class);
-                startActivity(intent);
-            }
-        });
     }
 
     @Override
@@ -65,6 +56,7 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
                 break;
 
             case R.id.btnsignIn:
+
                 userLogin();
                 break;
 
@@ -110,7 +102,10 @@ public class LoginPage extends AppCompatActivity implements View.OnClickListener
                     FirebaseUser user =FirebaseAuth.getInstance().getCurrentUser();
 
                     if (user.isEmailVerified()){
-                        startActivity(new Intent(LoginPage.this,MainActivity.class));
+                        Intent intent = new Intent(LoginPage.this,MainActivity.class);
+                        intent.putExtra("EMAIL",email);
+                        startActivity(intent);
+                        //startActivity(new Intent(LoginPage.this,MainActivity.class));
                     }else {
                         user.sendEmailVerification();
                         Toast.makeText(LoginPage.this, "Check Your email to verify your account", Toast.LENGTH_SHORT).show();

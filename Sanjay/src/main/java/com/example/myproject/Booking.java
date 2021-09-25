@@ -27,8 +27,10 @@ public class Booking extends AppCompatActivity implements
     public static String location = "";
     final Calendar myCalendar = Calendar.getInstance();
     final Calendar myCalendar2 = Calendar.getInstance();
-    static String Email = "sanjay28.js@gmail.com";
-    static  String Model= "BMW";
+    static String Email;
+    static  String Model;
+
+
 
 
     @Override
@@ -37,6 +39,10 @@ public class Booking extends AppCompatActivity implements
         setContentView(R.layout.activity_booking);
 
 //checking
+
+        Intent intent2 = getIntent();
+        Email = intent2.getStringExtra("EMAIL");
+        Model = intent2.getStringExtra("Model");
 
         EditText editText6 = findViewById(R.id.Car_Model);
         editText6.setText(Model);

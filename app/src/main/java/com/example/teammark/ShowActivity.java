@@ -6,9 +6,13 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.myproject.Booking;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -45,6 +49,22 @@ public class ShowActivity extends AppCompatActivity {
         ItemTouchHelper touchHelper = new ItemTouchHelper(new TouchHelper(adapter));
         touchHelper.attachToRecyclerView(recyclerView);
 
+
+        ImageView img = (ImageView)findViewById(R.id.logo);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String EMAIL;
+                Intent intent2 = getIntent();
+                EMAIL = intent2.getStringExtra("EMAIL");
+                Toast.makeText(ShowActivity.this, EMAIL, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(ShowActivity.this,Booking.class);
+                intent.putExtra("EMAIL",EMAIL);
+                intent.putExtra("Model","Benz");
+                startActivity(intent);
+            }
+        });
+
         showData();
     }
     public void showData(){
@@ -66,4 +86,5 @@ public class ShowActivity extends AppCompatActivity {
             }
         });
     }
+
 }
