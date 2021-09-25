@@ -19,13 +19,13 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 public class Profile extends AppCompatActivity {
     private FirebaseFirestore db;
-
+    static String Email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         db = FirebaseFirestore.getInstance();
-        String Email;
+
         Intent intent = getIntent();
         Email = intent.getStringExtra("EMAIL");
         EditText input1, input2, input3, input4;
