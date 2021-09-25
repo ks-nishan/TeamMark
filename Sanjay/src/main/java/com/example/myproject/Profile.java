@@ -20,7 +20,6 @@ import com.google.firebase.firestore.QuerySnapshot;
 public class Profile extends AppCompatActivity {
     private FirebaseFirestore db;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +34,6 @@ public class Profile extends AppCompatActivity {
         input1 = findViewById(R.id.P_Username);
         input2 = findViewById(R.id.P_Email);
         input3 = findViewById(R.id.P_Phone);
-        input3.setText(Email);
         input4 = findViewById(R.id.P_Password);
         input5 = findViewById(R.id.P_Username2);
         btn1 = findViewById(R.id.EditButton_P);
