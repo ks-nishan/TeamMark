@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="wrong">We want to provied you with the best experiance,</string>
+    <string name="textView">We want to provide you the best experiance, So that your feedback is very important for us</string>
+    <string name="plantext">Here you go</string>
+    <string name="plantextt">here you go</string>
+    <string name="b2">go</string>
+    <string name="b1">submit</string>
+    <string name="t2">How likely are you recommend our parking slots</string>
+    <string name="thank">Thank You</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="nostars">Number of Stars</string>
+    <string name="r3">vehicle</string>
+    <string name="r2">vehicl2</string>
+    <string name="r4">Highest total</string>
+    <string name="r343434" />
+    <string name="board">vehicle No</string>
+    <string name="board2">vehicle No</string>
+    <string name="text1">CUSTOMER ID</string>
+    <string name="CO1">COMMENT</string>
+    <string name="re1">replay</string>
+    <string name="bu3">Next</string>
+    <string name="bt4">ok</string>
+    <string name="but5">sent</string>
+    <string name="button5">Show</string>
+    <string name="rating">Vehicles Ratings</string>
+
+    <string name="rv">Vehicles Review</string>
+
+    <string name="feedback">Feedback</string>
+    <string name="cid">Customer ID</string>
+
+    <string name="msg">FeedBack Message</string>
+
+</resources>
