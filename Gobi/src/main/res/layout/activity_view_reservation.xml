@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#F4F4F4"
     android:orientation="vertical"
-    tools:context=".ViewParkingAreaActivity">
+    tools:context=".ViewReservationActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -23,7 +23,7 @@
             <LinearLayout
                 android:layout_marginLeft="16dp"
                 android:orientation="vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <TextView
@@ -31,35 +31,22 @@
                     android:layout_marginTop="20dp"
                     android:textSize="32sp"
                     android:textColor="#FFF"
-                    android:text="@string/parkingTitle"
+                    android:text="My Reservations"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"/>
 
                 <TextView
                     android:id="@+id/subTitleParking"
                     android:textSize="18sp"
                     android:textColor="@color/blue_600"
                     android:layout_marginTop="8dp"
-                    android:text="@string/parkingSubTitle"
+                    android:text="Find All Parking Reservations"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"/>
 
             </LinearLayout>
-
-            <Button
-                android:id="@+id/btnAddArea"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="35dp"
-                android:background="@drawable/ic_new"
-                android:gravity="center"
-                android:includeFontPadding="false"
-                android:text="@string/addicon"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="38sp" />
-
 
         </LinearLayout>
 
@@ -79,7 +66,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listParkingAreas"
+        android:id="@+id/listReservations"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-60dp"
@@ -92,12 +79,11 @@
         android:id="@+id/endPage"
         android:textSize="16sp"
         android:textColor="#9A9A9A"
-        android:layout_marginTop="-30dp"
-        android:text="@string/endPage"
+        android:layout_marginTop="30dp"
+        android:text="No more reservations"
         android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -107,13 +93,12 @@
         />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+        android:id="@+id/bottomNavigationView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:itemBackground="@color/orange_500"
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
-        app:menu="@menu/bottom_nav_admin"
-        android:layout_marginTop="-53dp"/>
-
+        app:menu="@menu/bottom_nav_customer"
+        android:layout_marginTop="-54dp"/>
 </LinearLayout>

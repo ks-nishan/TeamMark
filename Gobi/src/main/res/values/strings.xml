@@ -16,19 +16,23 @@
     <string name="lblTitle">Parking Area Title:</string>
     <string name="edtTitle">Enter parking area title/name</string>
 
-    <string name="lblAddress">Parking Area Address:</string>
+    <string name="lblAddress">Parking Area Location:</string>
     <string name="edtAddress">Enter parking area address/location</string>
 
     <string name="lblVehicleType">Vehicle Type:</string>
     <string name="chkTypeBike">Bike</string>
     <string name="chkTypeCar">Car</string>
 
-    <string name="lblSlots">Number of Slots:</string>
+    <string name="lblSlots">Number of Slots</string>
+    <string name="lblBikeSlots">Bike Slots:</string>
     <string name="edtCountBikeSlots">No of Bike Slots</string>
+    <string name="lblCarSlots">Car Slots:</string>
     <string name="edtCountCarSlots">No of Car Slots</string>
 
-    <string name="lblFee">Parking Fee per Hour:</string>
+    <string name="lblFee">Parking Fee per Hour</string>
+    <string name="lblBikeFee">Bike Fee:</string>
     <string name="edtFeeBike">Bike Fee</string>
+    <string name="lblCarFee">Car Fee:</string>
     <string name="edtFeeCar">Car Fee</string>
 
     <string name="lblEVFacility">EV Facility:</string>
@@ -46,21 +50,38 @@
     <string name="chkConCHA">CHA</string>
 
     <string name="titleParkingArea">Parking Area</string>
-    <string name="addressParkingArea">Location ...</string>
+    <string name="addressParkingArea">Location</string>
     <string name="feeParkingArea">100Rs/hr</string>
 
-    <string name="iconBikeSlots">🏍</string>
     <string name="numBikeSlots">25</string>
-
-    <string name="iconCarSlots">🚗</string>
     <string name="numCarSlots">50</string>
-
-    <string name="iconEVFacility">🔋</string>
     <string name="wattEVFacility">10kw</string>
-
-    <string name="iconConnector">🔌</string>
     <string name="txtConnector">Combo</string>
 
+    <string name="titleParkingReservation">Reserve Parking Slot</string>
+
+    <string name="lblVehicleNumber">Vehicle Number: </string>
+    <string name="edtVehicleNumber">Enter Vehicle Number</string>
+
+    <string name="lblCustomerName">Customer Name: </string>
+    <string name="edtCustomerName">Enter Customer Name</string>
+
+    <string name="lblLicenceNumber">Driving Licence: </string>
+    <string name="edtLicenceNumber">Enter Driving Licence Number</string>
+
+    <string name="lblContactNumber">Contact Number: </string>
+    <string name="edtContactNumber">Enter Contact Number</string>
+
+    <string name="lblArrivalDate">Arrival Date: </string>
+    <string name="edtArrivalDate">Pick Arrival Date </string>
+
+    <string name="lblArrivalTime">Arrival Time: </string>
+    <string name="edtArrivalTime">Pick Arrival Time </string>
+
+    <string name="btnReserve">Reserve</string>
+
+    <string name="titleReservation">My Parking Reservations</string>
+    <string name="subTitleReservation">Find All Parking Reservations</string>
 
 
 </resources>

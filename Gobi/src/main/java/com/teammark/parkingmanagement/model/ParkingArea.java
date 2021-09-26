@@ -6,32 +6,32 @@ public class ParkingArea {
     private String parkingareaTitle;
     private String parkingareaAddress;
 
-    private int typeBike;
-    private int typeCar;
+    private String typeBike;
+    private String typeCar;
 
-    private int countBikeSlot;
-    private int countCarSlot;
+    private String countBikeSlot;
+    private String countCarSlot;
 
-    private double feeBike;
-    private double feeCar;
+    private String feeBike;
+    private String feeCar;
 
-    private int evFacility;
+    private String evFacility;
 
-    private int wattMin;
-    private int wattMed;
-    private int wattMax;
+    private String wattMin;
+    private String wattMed;
+    private String wattMax;
 
-    private int conTwo;
-    private int conCombo;
-    private int conCha;
+    private String conTwo;
+    private String conCombo;
+    private String conCha;
 
     public ParkingArea() {
     }
 
 
     public ParkingArea(String parkingareaID, String parkingAreaImg, String parkingareaTitle, String parkingareaAddress,
-                       int typeBike, int typeCar, int countBikeSlot, int countCarSlot, double feeBike, double feeCar,
-                       int evFacility, int wattMin, int wattMed, int wattMax, int conTwo, int conCombo, int conCha) {
+                       String typeBike, String typeCar, String countBikeSlot, String countCarSlot, String feeBike, String feeCar,
+                       String evFacility, String wattMin, String wattMed, String wattMax, String conTwo, String conCombo, String conCha) {
         this.parkingareaID = parkingareaID;
         this.parkingAreaImg = parkingAreaImg;
         this.parkingareaTitle = parkingareaTitle;
@@ -54,8 +54,8 @@ public class ParkingArea {
 
 
     public ParkingArea(String parkingareaID, String parkingareaTitle, String parkingareaAddress,
-                       int typeBike, int typeCar, int countBikeSlot, int countCarSlot, double feeBike, double feeCar,
-                       int evFacility, int wattMin, int wattMed, int wattMax, int conTwo, int conCombo, int conCha) {
+                       String typeBike, String typeCar, String countBikeSlot, String countCarSlot, String feeBike, String feeCar,
+                       String evFacility, String wattMin, String wattMed, String wattMax, String conTwo, String conCombo, String conCha) {
         this.parkingareaID = parkingareaID;
         this.parkingareaTitle = parkingareaTitle;
         this.parkingareaAddress = parkingareaAddress;
@@ -106,107 +106,107 @@ public class ParkingArea {
         this.parkingareaAddress = parkingareaAddress;
     }
 
-    public int getTypeBike() {
+    public String getTypeBike() {
         return typeBike;
     }
 
-    public void setTypeBike(int typeBike) {
+    public void setTypeBike(String typeBike) {
         this.typeBike = typeBike;
     }
 
-    public int getTypeCar() {
+    public String getTypeCar() {
         return typeCar;
     }
 
-    public void setTypeCar(int typeCar) {
+    public void setTypeCar(String typeCar) {
         this.typeCar = typeCar;
     }
 
-    public int getCountBikeSlot() {
+    public String getCountBikeSlot() {
         return countBikeSlot;
     }
 
-    public void setCountBikeSlot(int countBikeSlot) {
+    public void setCountBikeSlot(String countBikeSlot) {
         this.countBikeSlot = countBikeSlot;
     }
 
-    public int getCountCarSlot() {
+    public String getCountCarSlot() {
         return countCarSlot;
     }
 
-    public void setCountCarSlot(int countCarSlot) {
+    public void setCountCarSlot(String countCarSlot) {
         this.countCarSlot = countCarSlot;
     }
 
-    public double getFeeBike() {
+    public String getFeeBike() {
         return feeBike;
     }
 
-    public void setFeeBike(double feeBike) {
+    public void setFeeBike(String feeBike) {
         this.feeBike = feeBike;
     }
 
-    public double getFeeCar() {
+    public String getFeeCar() {
         return feeCar;
     }
 
-    public void setFeeCar(double feeCar) {
+    public void setFeeCar(String feeCar) {
         this.feeCar = feeCar;
     }
 
-    public int getEvFacility() {
+    public String getEvFacility() {
         return evFacility;
     }
 
-    public void setEvFacility(int evFacility) {
+    public void setEvFacility(String evFacility) {
         this.evFacility = evFacility;
     }
 
-    public int getWattMin() {
+    public String getWattMin() {
         return wattMin;
     }
 
-    public void setWattMin(int wattMin) {
+    public void setWattMin(String wattMin) {
         this.wattMin = wattMin;
     }
 
-    public int getWattMed() {
+    public String getWattMed() {
         return wattMed;
     }
 
-    public void setWattMed(int wattMed) {
+    public void setWattMed(String wattMed) {
         this.wattMed = wattMed;
     }
 
-    public int getWattMax() {
+    public String getWattMax() {
         return wattMax;
     }
 
-    public void setWattMax(int wattMax) {
+    public void setWattMax(String wattMax) {
         this.wattMax = wattMax;
     }
 
-    public int getConTwo() {
+    public String getConTwo() {
         return conTwo;
     }
 
-    public void setConTwo(int conTwo) {
+    public void setConTwo(String conTwo) {
         this.conTwo = conTwo;
     }
 
-    public int getConCombo() {
+    public String getConCombo() {
         return conCombo;
     }
 
-    public void setConCombo(int conCombo) {
+    public void setConCombo(String conCombo) {
         this.conCombo = conCombo;
     }
 
-    public int getConCha() {
+    public String getConCha() {
         return conCha;
     }
 
-    public void setConCha(int conCha) {
+    public void setConCha(String conCha) {
         this.conCha = conCha;
     }
 }

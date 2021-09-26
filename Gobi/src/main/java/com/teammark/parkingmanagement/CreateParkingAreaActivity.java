@@ -24,6 +24,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.internal.Storage;
@@ -57,6 +58,8 @@ public class CreateParkingAreaActivity extends AppCompatActivity {
 
     private ImageView imgParking;
 
+    private TextView txtTitleParking;
+
     private Uri imgParkingUri;
 
     private ProgressBar prgCreateArea;
@@ -70,7 +73,10 @@ public class CreateParkingAreaActivity extends AppCompatActivity {
     // ParkingArea Object instantiation
     private ParkingArea parkingArea;
 
+    // ActivityResultLauncher<Intent> Object instantiation
     private ActivityResultLauncher<Intent> fileSelectorLauncher;
+
+    private String uParkingareaID, uParkingAreaImg, uParkingareaTitle, uParkingareaAddress, uTypeBike, uTypeCar,  uCountBikeSlot, uCountCarSlot, uFeeBike, uFeeCar, uEVFacility,  uWattMin,  uWattMed, uWattMax,  uConTwo, uConCombo, uConCha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,14 +116,104 @@ public class CreateParkingAreaActivity extends AppCompatActivity {
         // ImageViews
         imgParking = findViewById(R.id.imgParking);
 
+        // TextView
+        txtTitleParking = findViewById(R.id.titleParking);
+
         // ProgressBar
         prgCreateArea = findViewById(R.id.prgCreateArea);
 
         // Database initialization
         db = FirebaseFirestore.getInstance();
 
+        Bundle bundle = getIntent().getExtras();
+
+        if(bundle != null){
+            btnCreateArea.setText("Update");
+
+            txtTitleParking.setText("Update Parking Area");
+
+            uParkingareaID = bundle.getString("uID");
+            uParkingAreaImg=bundle.getString("uImg");
+            uParkingareaTitle=bundle.getString("uTitle");
+            uParkingareaAddress=bundle.getString("uAddress");
+
+            uTypeBike=bundle.getString("uTypeBike");
+            uTypeCar=bundle.getString("uTypeCar");
+
+            uCountBikeSlot=bundle.getString("uCountBikeSlots");
+            uCountCarSlot=bundle.getString("uCountCarSlots");
+
+            uFeeBike=bundle.getString("uFeeBike");
+            uFeeCar=bundle.getString("uFeeCar");
+
+            uEVFacility=bundle.getString("uEVFacility");
+
+            uWattMin=bundle.getString("uWattMin");
+            uWattMed=bundle.getString("uWattMed");
+            uWattMax=bundle.getString("uWattMax");
+
+            uConTwo=bundle.getString("uConTypeTwo");
+            uConCombo=bundle.getString("uConCombo");
+            uConCha=bundle.getString("uConCHA");
+
+            edtTitle.setText(uParkingareaTitle);
+            edtAddress.setText(uParkingareaAddress);
+            edtCountBikeSlots.setText(uCountBikeSlot);
+            edtCountCarSlots.setText(uCountCarSlot);
+            edtFeeBike.setText(uFeeBike);
+            edtFeeCar.setText(uFeeCar);
+
+            if(uTypeBike.equalsIgnoreCase("Yes")){
+                chkTypeBike.setChecked(true);
+            }
+
+            if (uEVFacility.equalsIgnoreCase("Yes")){
+                radEVYes.setChecked(true);
+            }else{
+                radEVNo.setChecked(true);
+            }
+
+            if (uTypeCar.equalsIgnoreCase("Yes")){
+                chkTypeCar.setChecked(true);
+            }
+
+            if(uWattMin.equalsIgnoreCase("Yes")){
+                chkWattMin.setChecked(true);
+            }
+
+            if(uWattMed.equalsIgnoreCase("Yes")){
+                chkWattMed.setChecked(true);
+            }
+
+            if(uWattMax.equalsIgnoreCase("Yes")){
+                chkWattMax.setChecked(true);
+            }
+
+            if(uConTwo.equalsIgnoreCase("Yes")){
+                chkConTypeTwo.setChecked(true);
+            }
+
+            if(uConCombo.equalsIgnoreCase("Yes")){
+                chkConCombo.setChecked(true);
+            }
+
+            if(uConCha.equalsIgnoreCase("Yes")){
+                chkConCHA.setChecked(true);
+            }
+
+            Picasso.get()
+                    .load(uParkingAreaImg)
+                    .fit()
+                    .centerCrop()
+                    .into(imgParking);
+
+        }else{
+            btnCreateArea.setText("Create");
+            txtTitleParking.setText("Create New Parking Area");
+        }
+
         // storage initialization
-        storage = FirebaseStorage.getInstance().getReference();
+        storage = FirebaseStorage.getInstance().getReference("ParkingAreas");
 
         imgParking.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,94 +245,102 @@ public class CreateParkingAreaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String id = UUID.randomUUID().toString();
+                String id;
+
+                if(bundle != null){
+                    id = uParkingareaID;
+                }else {
+                    id = UUID.randomUUID().toString();
+                }
 
                 String title = edtTitle.getText().toString();
                 String address = edtAddress.getText().toString();
 
-                int countBikeSlots = Integer.parseInt(edtCountBikeSlots.getText().toString());
-                int countCarSlots = Integer.parseInt(edtCountCarSlots.getText().toString());
+                String countBikeSlots = edtCountBikeSlots.getText().toString();
+                String countCarSlots = edtCountCarSlots.getText().toString();
 
-                double feeBike = Double.parseDouble(edtFeeBike.getText().toString());
-                double feeCar = Double.parseDouble(edtFeeCar.getText().toString());
+                String feeBike = edtFeeBike.getText().toString();
+                String feeCar = edtFeeCar.getText().toString();
 
-                int typeBike;
-                int typeCar;
+                String typeBike;
+                String typeCar;
 
                 if(chkTypeBike.isChecked()){
-                    typeBike = 1;
+                    typeBike = "Yes";
                 }else {
-                    typeBike = 0;
+                    typeBike = "No";
                 }
 
                 if(chkTypeCar.isChecked()){
-                    typeCar = 1;
+                    typeCar = "Yes";
                 }else {
-                    typeCar = 0;
+                    typeCar = "No";
                 }
 
-                int wattMin;
-                int wattMed;
-                int wattMax;
+                String wattMin;
+                String wattMed;
+                String wattMax;
 
                 if(chkWattMin.isChecked()){
-                    wattMin = 1;
+                    wattMin = "Yes";
                 }else {
-                    wattMin = 0;
+                    wattMin = "No";
                 }
 
                 if(chkWattMed.isChecked()){
-                    wattMed = 1;
+                    wattMed = "Yes";
                 }else {
-                    wattMed = 0;
+                    wattMed = "No";
                 }
 
                 if(chkWattMax.isChecked()){
-                    wattMax = 1;
+                    wattMax = "Yes";
                 }else {
-                    wattMax = 0;
+                    wattMax = "No";
                 }
 
 
-                int conTypeTwo;
-                int conCombo;
-                int conCHA;
+                String conTypeTwo;
+                String conCombo;
+                String conCHA;
 
                 if(chkConTypeTwo.isChecked()){
-                    conTypeTwo = 1;
+                    conTypeTwo = "Yes";
                 }else {
-                    conTypeTwo = 0;
+                    conTypeTwo = "No";
                 }
 
                 if(chkConCombo.isChecked()){
-                    conCombo = 1;
+                    conCombo = "Yes";
                 }else {
-                    conCombo = 0;
+                    conCombo = "No";
                 }
 
                 if(chkConCHA.isChecked()){
-                    conCHA = 1;
+                    conCHA = "Yes";
                 }else {
-                    conCHA = 0;
+                    conCHA = "No";
                 }
 
-                int evFacility;
+                String evFacility;
 
                 if (radEVYes.isChecked()){
-                    evFacility = 1;
+                    evFacility = "Yes";
                 }else{
-                    evFacility = 0;
+                    evFacility = "No";
                 }
 
                 parkingArea = new ParkingArea(id, title, address, typeBike, typeCar,
                         countBikeSlots, countCarSlots, feeBike, feeCar, evFacility,
                         wattMin, wattMed, wattMax, conTypeTwo, conCombo, conCHA);
 
+                Bundle bundleupd = getIntent().getExtras();
+
                 if(imgParkingUri != null){
                     String childPath = System.currentTimeMillis() + "." + getFileExtension(imgParkingUri);
                     StorageReference fileReference = storage.child(childPath);
 
-                    saveToFireStorage(fileReference, imgParkingUri, childPath);
+                    saveToFireStorage(fileReference, imgParkingUri, childPath, bundleupd);
                 } else {
                     Toast.makeText(CreateParkingAreaActivity.this, "No image selected", Toast.LENGTH_SHORT).show();
                 }
@@ -284,7 +388,7 @@ public class CreateParkingAreaActivity extends AppCompatActivity {
             db.collection("ParkingAreas").document(parkingArea.getParkingareaID()).set(parkingAreaMap)
                   .addOnCompleteListener(new OnCompleteListener<Void>() {
                       @Override
-                      public void onComplete(@NonNull @org.jetbrains.annotations.NotNull Task<Void> task) {
+                      public void onComplete(@NonNull @NotNull Task<Void> task) {
                           if (task.isSuccessful()) {
                               Toast.makeText(CreateParkingAreaActivity.this, "Created Successfully !!!", Toast.LENGTH_SHORT).show();
                               Intent intent = new Intent(CreateParkingAreaActivity.this, ViewParkingAreaActivity.class);
@@ -304,7 +408,62 @@ public class CreateParkingAreaActivity extends AppCompatActivity {
         }
     }
 
-    public void saveToFireStorage(StorageReference strReference,Uri imageUri, String childPath){
+    private void updateToFireStore(ParkingArea parkingArea){
+        if(parkingArea != null){
+            String id =  parkingArea.getParkingareaID();
+
+            String image = parkingArea.getParkingAreaImg();
+            String title = parkingArea.getParkingareaTitle();
+            String address = parkingArea.getParkingareaAddress();
+
+            String typeBike = parkingArea.getTypeBike();
+            String typeCar = parkingArea.getTypeCar();
+
+            String countBikeSlots = parkingArea.getCountBikeSlot();
+            String countCarSlots = parkingArea.getCountCarSlot();
+
+            String feeBike = parkingArea.getFeeBike();
+            String feeCar = parkingArea.getFeeCar();
+
+            String evFacility = parkingArea.getEvFacility();
+
+            String wattMin = parkingArea.getWattMin();
+            String wattMed = parkingArea.getWattMed();
+            String wattMax = parkingArea.getWattMax();
+
+            String conTypeTwo = parkingArea.getConTwo();
+            String conCombo = parkingArea.getConCombo();
+            String conCHA = parkingArea.getConCha();
+
+
+            db.collection("ParkingAreas").document(id).update("image", image, "title", title, "address", address,
+                    "typeBike", typeBike, "typeCar", typeCar, "countBikeSlots", countBikeSlots, "countCarSlots", countCarSlots,
+                    "feeBike", feeBike, "feeCar", feeCar, "evFacility", evFacility, "wattMin", wattMin, "wattMed", wattMed, "wattMax", wattMax,
+                    "conTypeTwo", conTypeTwo, "conCombo", conCombo, "conCHA", conCHA)
+
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull @NotNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(CreateParkingAreaActivity.this, "Update Successfull!!!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(CreateParkingAreaActivity.this, ViewParkingAreaActivity.class);
+                                startActivity(intent);
+                            }
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull @NotNull Exception e) {
+                    Toast.makeText(CreateParkingAreaActivity.this, "Update Failed !!!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(CreateParkingAreaActivity.this, ViewParkingAreaActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }else{
+            Toast.makeText(this, "Please fill necessary fields", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void saveToFireStorage(StorageReference strReference,Uri imageUri, String childPath, Bundle bundle){
         strReference.putFile(imageUri).
                 addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
@@ -314,14 +473,16 @@ public class CreateParkingAreaActivity extends AppCompatActivity {
                             public void onComplete(@NonNull @NotNull Task<Uri> task) {
                                 String imageUrl =   task.getResult().toString();
 
-                                Toast.makeText(CreateParkingAreaActivity.this, imageUrl, Toast.LENGTH_SHORT).show();
+                                // Toast.makeText(CreateParkingAreaActivity.this, imageUrl, Toast.LENGTH_SHORT).show();
                                 parkingArea.setParkingAreaImg(imageUrl);
 
-                                Log.i("imgURL", "TEST");
-                                Log.i("imgURL", imageUrl);
-
-                                // add new record to db
-                                saveToFireStore(parkingArea);
+                                if(bundle != null){
+                                    // update record to db
+                                    updateToFireStore(parkingArea);
+                                }else{
+                                    // add new record to db
+                                    saveToFireStore(parkingArea);
+                                }
                             }
                         });
 

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F4"
+    android:orientation="vertical"
+    tools:context=".UpdateParkingReservationActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@color/orange_500"
+        android:layout_height="198dp">
+
+        <TextView
+            android:id="@+id/titleUpdateReservation"
+            android:layout_marginTop="20dp"
+            android:textSize="26sp"
+            android:textColor="#FFF"
+            android:text="Update Reservation"
+            android:textAlignment="center"
+            android:layout_marginBottom="28dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            android:id="@+id/prgCreateArea"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <View
+            android:layout_marginTop="20dp"
+            android:background="@color/orange_500"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/bg_formcard"
+            android:orientation="vertical"
+            android:paddingTop="22dp"
+            android:paddingBottom="22dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblVehicleNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/lblVehicleNumber"
+                    android:textColor="@color/blue_800"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edtVehicleNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_inputtask"
+                    android:hint="@string/edtVehicleNumber"
+                    android:inputType="text"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/blue_600"
+                    android:textColorHint="#B5B5B5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblCustomerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/lblCustomerName"
+                    android:textColor="@color/blue_800"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edtCustomerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_inputtask"
+                    android:hint="@string/edtCustomerName"
+                    android:inputType="text"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/blue_600"
+                    android:textColorHint="#B5B5B5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblLicenceNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/lblLicenceNumber"
+                    android:textColor="@color/blue_800"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edtLicenceNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_inputtask"
+                    android:hint="@string/edtLicenceNumber"
+                    android:inputType="text"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/blue_600"
+                    android:textColorHint="#B5B5B5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblContactNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/lblContactNumber"
+                    android:textColor="@color/blue_800"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edtContactNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_inputtask"
+                    android:hint="@string/edtContactNumber"
+                    android:inputType="text"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/blue_600"
+                    android:textColorHint="#B5B5B5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblArrivalDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/lblArrivalDate"
+                    android:textColor="@color/blue_800"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edtArrivalDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_inputtask"
+                    android:hint="@string/edtArrivalDate"
+                    android:inputType="text"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/blue_600"
+                    android:textColorHint="#B5B5B5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lblArrivalTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/lblArrivalTime"
+                    android:textColor="@color/blue_800"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/edtArrivalTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_inputtask"
+                    android:hint="@string/edtArrivalTime"
+                    android:inputType="text"
+                    android:paddingLeft="12dp"
+                    android:textColor="@color/blue_600"
+                    android:textColorHint="#B5B5B5" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/lblEVFacility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lblEVFacility"
+                    android:textColor="@color/blue_800"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"/>
+
+                <RadioGroup
+                    android:id="@+id/radioGroupEVC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radEVCYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="75dp"
+                        android:checked="false"
+                        android:text="@string/radEVYes"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/radEVCNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:checked="false"
+                        android:text="@string/radEVNo"
+                        android:textSize="16sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnReserveParkingSlot"
+                android:layout_marginTop="20dp"
+                android:text="Update"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_btncreate"
+                app:backgroundTint="@color/orange_500"
+                android:textSize="22sp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"/>
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_marginTop="14dp"
+                android:text="@string/btnCancel"
+                android:textColor="@color/blue_800"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_btncancel"
+                app:backgroundTint="#DDDDDD"
+                android:textSize="22sp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
