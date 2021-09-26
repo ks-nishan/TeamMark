@@ -28,19 +28,19 @@
 
                 <TextView
                     android:id="@+id/titleParking"
-                    android:layout_marginTop="20dp"
-                    android:textSize="32sp"
-                    android:textColor="#FFF"
-                    android:text="@string/parkingTitle"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Parking Slots"
+                    android:textColor="#FFF"
+                    android:textSize="32sp" />
 
                 <TextView
                     android:id="@+id/subTitleParking"
                     android:textSize="18sp"
                     android:textColor="@color/blue_600"
                     android:layout_marginTop="8dp"
-                    android:text="@string/parkingSubTitle"
+                    android:text="Find all parking slots"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
 

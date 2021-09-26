@@ -64,13 +64,13 @@ public class ViewReservationActivity extends AppCompatActivity {
 
         bottomNavCus.setSelectedItemId(R.id.myReservatons);
 
-        View cusDashboard = findViewById(R.id.customerDashboard);
+        View cusList = findViewById(R.id.customerList);
 
-        cusDashboard.setOnClickListener(new View.OnClickListener() {
+        cusList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(ViewReservationActivity.this, Admin_dashboard.class);
-//                startActivity(intent);
+                Intent intent = new Intent(ViewReservationActivity.this, FindParkingSlotActivity.class);
+                startActivity(intent);
             }
         });
 

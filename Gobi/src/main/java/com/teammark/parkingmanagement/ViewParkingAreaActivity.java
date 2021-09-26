@@ -72,13 +72,13 @@ public class ViewParkingAreaActivity extends AppCompatActivity {
             }
         });
 
-        View adminDashboard = findViewById(R.id.adminDashboard);
+        View admList = findViewById(R.id.adminList);
 
-        adminDashboard.setOnClickListener(new View.OnClickListener() {
+        admList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(ViewParkingAreaActivity.this, Admin_dashboad.class);
-//                startActivity(intent);
+                Intent intent = new Intent(ViewParkingAreaActivity.this, ViewParkingAreaActivity.class);
+                startActivity(intent);
             }
         });
 

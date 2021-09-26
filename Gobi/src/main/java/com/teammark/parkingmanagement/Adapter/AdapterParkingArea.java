@@ -115,8 +115,6 @@ public class AdapterParkingArea extends RecyclerView.Adapter<AdapterParkingArea.
             holder.iconEVFacility.setVisibility(View.INVISIBLE);
         }
 
-        // txtEVFacility, txtConnector,
-
         Picasso.get()
                 .load(parkingAreaList.get(position).getParkingAreaImg())
                 .placeholder(R.drawable.parkingplaceholder)

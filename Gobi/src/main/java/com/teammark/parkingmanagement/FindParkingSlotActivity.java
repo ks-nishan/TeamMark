@@ -68,15 +68,15 @@ public class FindParkingSlotActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNavCus = findViewById(R.id.bottomNavigationView2);
 
-        bottomNavCus.setSelectedItemId(R.id.customerDashboard);
+        bottomNavCus.setSelectedItemId(R.id.customerList);
 
-        View cusDashboard = findViewById(R.id.customerDashboard);
+        View cusList = findViewById(R.id.customerList);
 
-        cusDashboard.setOnClickListener(new View.OnClickListener() {
+        cusList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(FindParkingSlotActivity.this, MainActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(FindParkingSlotActivity.this, FindParkingSlotActivity.class);
+                startActivity(intent);
             }
         });
 
