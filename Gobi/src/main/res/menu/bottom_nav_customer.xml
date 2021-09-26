@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/customerDashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/ic_dashboard"/>
+
+    <item
+        android:id="@+id/myReservatons"
+        android:title="Reservations"
+        android:icon="@drawable/ic_qr_code"/>
+
+    <item
+        android:id="@+id/adminUser"
+        android:title="Admin"
+        android:icon="@drawable/ic_admin_user"/>
+
+</menu>

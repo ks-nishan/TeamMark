@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#F4F4F4"
     android:orientation="vertical"
-    tools:context=".ViewParkingAreaActivity">
+    tools:context=".FindParkingSlotActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -47,19 +47,18 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btnAddArea"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="100dp"
+                android:id="@+id/btnMyReservations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
                 android:layout_marginTop="35dp"
                 android:background="@drawable/ic_new"
                 android:gravity="center"
                 android:includeFontPadding="false"
-                android:text="@string/addicon"
+                android:text="Reservations"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textSize="38sp" />
-
+                android:textSize="10sp" />
 
         </LinearLayout>
 
@@ -79,7 +78,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listParkingAreas"
+        android:id="@+id/listParkingSlots"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="-60dp"
@@ -98,22 +97,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="9"
-        android:id="@+id/fragmentContainer"
-        />
+        android:id="@+id/fragmentContainer" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+        android:id="@+id/bottomNavigationView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:itemBackground="@color/orange_500"
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
-        app:menu="@menu/bottom_nav_admin"
+        app:menu="@menu/bottom_nav_customer"
         android:layout_marginTop="-53dp"/>
-
 </LinearLayout>

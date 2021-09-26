@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -22,7 +21,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.teammark.parkingmanagement.Adapter.AdapterParkingArea;
-import com.teammark.parkingmanagement.TouchHelper.TouchHelperArea;
+import com.teammark.parkingmanagement.Adapter.AdapterParkingSlot;
 import com.teammark.parkingmanagement.model.ParkingArea;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,74 +29,73 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ViewParkingAreaActivity extends AppCompatActivity {
+public class FindParkingSlotActivity extends AppCompatActivity {
 
+    private Button btnMyReservations;
     private ProgressBar prgAreaList;
-    private Button btnAddArea;
-    private RecyclerView listParkingAreas;
+    private RecyclerView listParkingSlots;
     private FirebaseFirestore db;
-    private AdapterParkingArea adapterParkingArea;
-    private List<ParkingArea> areaList;
-
-    private BottomNavigationView bottomNavAdmin;
+    private AdapterParkingSlot adapterParkingSlot;
+    private List<ParkingArea> slotList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_parking_area);
+        setContentView(R.layout.activity_find_parking_slot);
 
         prgAreaList = findViewById(R.id.prgAreaList);
 
-        listParkingAreas = findViewById(R.id.listParkingAreas);
-        listParkingAreas.setHasFixedSize(true);
-        listParkingAreas.setLayoutManager(new LinearLayoutManager(this));
+        listParkingSlots = findViewById(R.id.listParkingSlots);
+        listParkingSlots.setHasFixedSize(true);
+        listParkingSlots.setLayoutManager(new LinearLayoutManager(this));
 
         db = FirebaseFirestore.getInstance();
-        areaList = new ArrayList<>();
-        adapterParkingArea = new AdapterParkingArea(this, areaList);
-        listParkingAreas.setAdapter(adapterParkingArea);
+        slotList = new ArrayList<>();
+        adapterParkingSlot = new AdapterParkingSlot(FindParkingSlotActivity.this, slotList);
+        listParkingSlots.setAdapter(adapterParkingSlot);
 
-        ItemTouchHelper touchHelper = new ItemTouchHelper(new TouchHelperArea(adapterParkingArea));
-        touchHelper.attachToRecyclerView(listParkingAreas);
+        btnMyReservations = findViewById(R.id.btnMyReservations);
 
-        fetchData();
-
-        btnAddArea = findViewById(R.id.btnAddArea);
-
-        btnAddArea.setOnClickListener(new View.OnClickListener() {
+        btnMyReservations.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ViewParkingAreaActivity.this, CreateParkingAreaActivity.class);
+                Intent intent = new Intent(FindParkingSlotActivity.this, ViewReservationActivity.class);
                 startActivity(intent);
             }
         });
 
-        View adminDashboard = findViewById(R.id.adminDashboard);
+        fetchData();
 
-        adminDashboard.setOnClickListener(new View.OnClickListener() {
+        BottomNavigationView bottomNavCus = findViewById(R.id.bottomNavigationView2);
+
+        bottomNavCus.setSelectedItemId(R.id.customerDashboard);
+
+        View cusDashboard = findViewById(R.id.customerDashboard);
+
+        cusDashboard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(ViewParkingAreaActivity.this, Admin_dashboad.class);
+//                Intent intent = new Intent(FindParkingSlotActivity.this, MainActivity.class);
 //                startActivity(intent);
             }
         });
 
-        View createPrkForm = findViewById(R.id.createParkingForm);
+        View resv = findViewById(R.id.myReservatons);
 
-        createPrkForm.setOnClickListener(new View.OnClickListener() {
+        resv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ViewParkingAreaActivity.this, CreateParkingAreaActivity.class);
+                Intent intent = new Intent(FindParkingSlotActivity.this, ViewReservationActivity.class);
                 startActivity(intent);
             }
         });
 
-        View customerUser = findViewById(R.id.customerUser);
+        View adminUser = findViewById(R.id.adminUser);
 
-        customerUser.setOnClickListener(new View.OnClickListener() {
+        adminUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ViewParkingAreaActivity.this, FindParkingSlotActivity.class);
+                Intent intent = new Intent(FindParkingSlotActivity.this, ViewParkingAreaActivity.class);
                 startActivity(intent);
             }
         });
@@ -108,7 +106,7 @@ public class ViewParkingAreaActivity extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull @NotNull Task<QuerySnapshot> task) {
-                        areaList.clear();
+                        slotList.clear();
 
                         for (DocumentSnapshot snapshot : task.getResult()){
                             ParkingArea parkingArea = new ParkingArea(
@@ -137,16 +135,17 @@ public class ViewParkingAreaActivity extends AppCompatActivity {
                                     snapshot.getString("conCombo"),
                                     snapshot.getString("conCHA"));
 
-                            areaList.add(parkingArea);
+                            slotList.add(parkingArea);
                         }
-                        adapterParkingArea.notifyDataSetChanged();
+
+                        adapterParkingSlot.notifyDataSetChanged();
 
                         prgAreaList.setVisibility(View.INVISIBLE);
                     }
                 }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull @NotNull Exception e) {
-                Toast.makeText(ViewParkingAreaActivity.this, "No Parking Areas", Toast.LENGTH_SHORT).show();
+                Toast.makeText(FindParkingSlotActivity.this, "No Parking Areas", Toast.LENGTH_SHORT).show();
             }
         });
     }
