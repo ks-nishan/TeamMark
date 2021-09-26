@@ -24,17 +24,20 @@
         <activity android:name=".Admin_PostAD" />
         <activity android:name=".ForgotPasswordPage" />
         <activity android:name=".RegisterPage" />
-        <activity android:name=".LoginPage" />
-        <activity android:name=".Admin_dashboad" />
-        <activity android:name=".advertisement_details" />
-        <activity android:name=".Advertisements" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginPage" >
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity android:name=".Admin_dashboad" />
+        <activity android:name=".advertisement_details" />
+        <activity android:name=".Advertisements" />
+        <activity android:name=".MainActivity">
+
 
         </activity>
     </application>
