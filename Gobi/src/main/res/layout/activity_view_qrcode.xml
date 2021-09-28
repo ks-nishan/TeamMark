@@ -36,8 +36,8 @@
 
         <ImageView
             android:id="@+id/imgscanQR"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
             android:src="@drawable/icqr"
             app:srcCompat="@drawable/bg_imgparking"
             android:padding="10dp"

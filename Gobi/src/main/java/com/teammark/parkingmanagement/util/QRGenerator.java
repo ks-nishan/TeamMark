@@ -22,7 +22,7 @@ public class QRGenerator {
         MultiFormatWriter writer = new MultiFormatWriter();
 
         try {
-            BitMatrix matrix = writer.encode(reservationID, BarcodeFormat.QR_CODE, 275, 275);
+            BitMatrix matrix = writer.encode(reservationID, BarcodeFormat.QR_CODE, 512, 512);
 
             BarcodeEncoder encoder = new BarcodeEncoder();
 
