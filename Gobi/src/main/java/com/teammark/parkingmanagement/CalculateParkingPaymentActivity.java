@@ -51,14 +51,11 @@ public class CalculateParkingPaymentActivity extends AppCompatActivity {
             public void onClick(View v) {
                 int hours = Integer.parseInt(edtHours.getText().toString());
                 int minutes = Integer.parseInt(edtMinutes.getText().toString());
-
                 int time = hours + (minutes/60);
 
                 if(radBike.isChecked()){
                     totalPayment += feeBike;
-                }
-
-                if(radCar.isChecked()){
+                }else if(radCar.isChecked()){
                     totalPayment += feeCar;
                 }
 
@@ -77,7 +74,6 @@ public class CalculateParkingPaymentActivity extends AppCompatActivity {
                 }
 
                 edtTotal.setText(totalPayment.toString());
-
                 totalPayment = 0.0;
             }
         });

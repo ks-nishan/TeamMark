@@ -50,6 +50,48 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp">
+
+            <EditText
+                android:id="@+id/searchReservation"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/bg_inputtask"
+                android:hint="Search Area"
+                android:inputType="text"
+                android:paddingLeft="12dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/blue_600"
+                android:textColorHint="#B5B5B5"/>
+
+
+
+            <LinearLayout
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_marginLeft="-50dp"
+                android:backgroundTint="@color/blue_700">
+
+                <TextView
+                    android:id="@+id/searchBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_search"
+                    android:backgroundTint="@color/blue_700"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
         <View
             android:layout_marginTop="20dp"
             android:background="@color/orange_500"
@@ -69,7 +111,7 @@
         android:id="@+id/listReservations"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-60dp"
+        android:layout_marginTop="25dp"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp">
 
@@ -79,11 +121,11 @@
         android:id="@+id/endPage"
         android:textSize="16sp"
         android:textColor="#9A9A9A"
-        android:layout_marginTop="30dp"
         android:text="No more reservations"
         android:textAlignment="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-30dp"/>
 
     <FrameLayout
         android:layout_width="match_parent"

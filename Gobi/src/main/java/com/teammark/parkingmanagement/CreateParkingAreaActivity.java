@@ -24,6 +24,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -253,14 +254,25 @@ public class CreateParkingAreaActivity extends AppCompatActivity {
                     id = UUID.randomUUID().toString();
                 }
 
+                int error = 0;
+
                 String title = edtTitle.getText().toString();
+                error = validateInputLength(edtTitle, error);
+
                 String address = edtAddress.getText().toString();
+                error = validateInputLength(edtAddress, error);
 
                 String countBikeSlots = edtCountBikeSlots.getText().toString();
+                error = validateInputNumeric(edtCountBikeSlots, error);
+
                 String countCarSlots = edtCountCarSlots.getText().toString();
+                error = validateInputNumeric(edtCountCarSlots, error);
 
                 String feeBike = edtFeeBike.getText().toString();
+                error = validateInputNumeric(edtFeeBike, error);
+
                 String feeCar = edtFeeCar.getText().toString();
+                error = validateInputNumeric(edtFeeCar, error);
 
                 String typeBike;
                 String typeCar;
@@ -336,13 +348,17 @@ public class CreateParkingAreaActivity extends AppCompatActivity {
 
                 Bundle bundleupd = getIntent().getExtras();
 
-                if(imgParkingUri != null){
+                if(imgParkingUri == null){
+                    Toast.makeText(CreateParkingAreaActivity.this, "No image selected", Toast.LENGTH_SHORT).show();
+                }
+
+                if(imgParkingUri != null && error == 0){
                     String childPath = System.currentTimeMillis() + "." + getFileExtension(imgParkingUri);
                     StorageReference fileReference = storage.child(childPath);
 
                     saveToFireStorage(fileReference, imgParkingUri, childPath, bundleupd);
                 } else {
-                    Toast.makeText(CreateParkingAreaActivity.this, "No image selected", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CreateParkingAreaActivity.this, "Invalid input", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -436,10 +452,12 @@ public class CreateParkingAreaActivity extends AppCompatActivity {
             String conCHA = parkingArea.getConCha();
 
 
-            db.collection("ParkingAreas").document(id).update("image", image, "title", title, "address", address,
-                    "typeBike", typeBike, "typeCar", typeCar, "countBikeSlots", countBikeSlots, "countCarSlots", countCarSlots,
-                    "feeBike", feeBike, "feeCar", feeCar, "evFacility", evFacility, "wattMin", wattMin, "wattMed", wattMed, "wattMax", wattMax,
-                    "conTypeTwo", conTypeTwo, "conCombo", conCombo, "conCHA", conCHA)
+            db.collection("ParkingAreas").document(id).update("image", image,
+                    "title", title, "address", address, "typeBike", typeBike,
+                    "typeCar", typeCar, "countBikeSlots", countBikeSlots, "countCarSlots", countCarSlots,
+                    "feeBike", feeBike, "feeCar", feeCar, "evFacility", evFacility, "wattMin",
+                    wattMin, "wattMed", wattMed, "wattMax", wattMax, "conTypeTwo", conTypeTwo,
+                    "conCombo", conCombo, "conCHA", conCHA)
 
                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
@@ -516,5 +534,41 @@ public class CreateParkingAreaActivity extends AppCompatActivity {
         MimeTypeMap mime = MimeTypeMap.getSingleton();
 
         return mime.getExtensionFromMimeType(cr.getType(uri));
+    }
+
+    private int validateInputLength(EditText edtText, int error){
+        String input = edtText.getText().toString();
+
+        if(input.length() == 0) {
+            error = 1;
+            edtText.setError("Empty Field");
+        }
+        return error;
+    }
+
+    private int validateInputNumeric(EditText edtText, int error){
+
+        int err = validateInputLength(edtText, error);
+
+        if(err == 0){
+            try {
+                int numeric = Integer.parseInt(edtText.getText().toString());
+            }catch (NumberFormatException e){
+                error = 1;
+                edtText.setError("Enter numeric value");
+            }
+        }
+
+        return error;
+    }
+
+    private int validateRad(RadioButton radioButton1, RadioButton radioButton2, int error){
+        if(!radioButton1.isChecked() || !radioButton2.isChecked()){
+            radioButton1.setError("Select an option");
+            radioButton2.setError("Select an option");
+            error = 1;
+        }
+
+        return  error;
     }
 }
