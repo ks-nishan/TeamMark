@@ -25,6 +25,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.teammark.parkingmanagement.FindParkingSlotActivity;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -119,6 +120,8 @@ public class Trip extends AppCompatActivity {
         Btn1.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
+        Intent intent = new Intent(Trip.this, FindParkingSlotActivity.class);
+        startActivity(intent);
 
 
 
