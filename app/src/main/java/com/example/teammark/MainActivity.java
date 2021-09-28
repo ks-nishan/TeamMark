@@ -11,6 +11,9 @@ import android.widget.Toast;
 
 import com.example.myproject.Profile;
 import com.google.firebase.auth.FirebaseAuth;
+import com.teammark.parkingmanagement.CreateParkingAreaActivity;
+import com.teammark.parkingmanagement.FindParkingSlotActivity;
+import com.teammark.parkingmanagement.ViewParkingAreaActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -57,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.cardParkingSloat:
-                i = new Intent(this,Admin_dashboad.class);
+                i = new Intent(this, FindParkingSlotActivity.class);
                 startActivity(i);
                 break;
 
@@ -78,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.cardBuyACar:
-                i = new Intent(this,ForgotPasswordPage.class);
+                i = new Intent(this,Admin_dashboad.class);
                 startActivity(i);
                 break;
 

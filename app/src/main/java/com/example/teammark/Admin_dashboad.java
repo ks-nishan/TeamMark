@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.teammark.parkingmanagement.FindParkingSlotActivity;
 import com.teammark.parkingmanagement.ViewParkingAreaActivity;
 
 public class Admin_dashboad extends AppCompatActivity implements View.OnClickListener{
@@ -49,7 +50,7 @@ public class Admin_dashboad extends AppCompatActivity implements View.OnClickLis
                 break;
 
             case R.id.cardResavation:
-                i = new Intent(this,PromoteAD2.class);
+                i = new Intent(this, FindParkingSlotActivity.class);
                 startActivity(i);
                 break;
 

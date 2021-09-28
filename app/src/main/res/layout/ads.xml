@@ -144,37 +144,8 @@
             android:textSize="15sp"
             android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/delImg"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:rotation="180"
-            android:src="@drawable/leftmessage" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/delImg"
-            android:text="Delete"
-            android:textColor="@color/white"
-            android:textStyle="italic" />
 
-        <ImageView
-            android:id="@+id/edtImg"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_toRightOf="@+id/title_text"
-            android:rotation="180"
-            android:src="@drawable/redo" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_toLeftOf="@+id/edtImg"
-            android:text="Update"
-            android:textColor="@color/white"
-            android:textStyle="italic" />
 
 
     </RelativeLayout>
