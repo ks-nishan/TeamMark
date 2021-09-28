@@ -85,6 +85,7 @@ public class ViewParkingAreaActivity extends AppCompatActivity {
 
         fetchData();
 
+        /*
         btnAddArea = findViewById(R.id.btnAddArea);
 
         btnAddArea.setOnClickListener(new View.OnClickListener() {
@@ -94,6 +95,7 @@ public class ViewParkingAreaActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        */
 
         View admList = findViewById(R.id.adminList);
 
