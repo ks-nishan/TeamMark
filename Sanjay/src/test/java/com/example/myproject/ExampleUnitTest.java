@@ -18,35 +18,39 @@ public class ExampleUnitTest {
     private CalculateMoney calculateMoney;
 
     @Before
-    public void setUp(){ calculateMoney= new CalculateMoney(); }
+    public void setUp() {
+        calculateMoney = new CalculateMoney();
+    }
 
     @Test
     public void TestCharge() throws ParseException {
 
         String pick = "01/05/2021";
-        String retur= "01/10/2021";
+        String retur = "01/10/2021";
 
-        float result = calculateMoney.Calculate(pick,retur);
-        assertEquals(25000.0f,result,0);
+        float result = calculateMoney.Calculate(pick, retur);
+        assertEquals(25000.0f, result, 0);
 
 
     }
+
     @Test
     public void TestTax() {
 
         float result = calculateMoney.Tax(1000.0f);
 
-        assertEquals(120.0f,result,0);
+        assertEquals(120.0f, result, 0);
 
 
     }
+
     @Test
     public void TestCoupon() {
 
         String coupon = "TM11";
         float result = calculateMoney.Coupon(coupon);
 
-        assertEquals( 200.0f,result,0);
+        assertEquals(200.0f, result, 0);
 
     }
 
@@ -55,26 +59,21 @@ public class ExampleUnitTest {
 
 
     @Before
-    public void setTrip(){ trip= new CalcDuration(); }
+    public void setTrip() {
+        trip = new CalcDuration();
+    }
 
     @Test
     public void TestDuration() throws ParseException {
 
         String pick = "01/05/2021";
-        String retur= "01/10/2021";
+        String retur = "01/10/2021";
 
-        int result = trip.durationCalc(pick,retur);
-        assertEquals(5,result,0);
+        int result = trip.durationCalc(pick, retur);
+        assertEquals(5, result, 0);
 
 
     }
-
-
-
-
-
-
-
 
 
 }

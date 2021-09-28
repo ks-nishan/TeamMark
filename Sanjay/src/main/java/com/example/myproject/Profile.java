@@ -90,7 +90,9 @@ public class Profile extends AppCompatActivity {
         ButtonSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent myinten = new Intent(Profile.this ,PastOrder.class);
+                myinten.putExtra("EMAIL",Email);
                 startActivity(myinten);
             }
         });
@@ -99,6 +101,7 @@ public class Profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myinten = new Intent(Profile.this ,showAllPast.class);
+                myinten.putExtra("EMAIL",Email);
                 startActivity(myinten);
             }
         });

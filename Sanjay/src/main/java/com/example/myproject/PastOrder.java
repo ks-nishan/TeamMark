@@ -105,9 +105,11 @@ public class PastOrder extends AppCompatActivity implements
                 String Model = in3.getText().toString();
 
                 if (!Date.isEmpty() && !Location.isEmpty() && !Model.isEmpty()) {
+                    Intent myintent = getIntent();
+                    String Email = myintent.getStringExtra("EMAIL");
 
 
-                    db.collection("Vehicle_Booking").whereEqualTo("PickupDate", Date).whereEqualTo("Location", Location).whereEqualTo("Model", Model)
+                    db.collection("Vehicle_Booking").whereEqualTo("PickupDate", Date).whereEqualTo("Location", Location).whereEqualTo("Model", Model).whereEqualTo("Email",Email)
                             .get()
                             .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                                 @Override
