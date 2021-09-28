@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/adminDashboard"
-        android:title="Dashboard"
-        android:icon="@drawable/ic_dashboard"/>
+        android:id="@+id/adminList"
+        android:title="Park"
+        android:icon="@drawable/ic_view_list"/>
 
     <item
         android:id="@+id/createParkingForm"

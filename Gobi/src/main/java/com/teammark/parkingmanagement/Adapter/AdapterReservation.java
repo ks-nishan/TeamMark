@@ -21,11 +21,13 @@ import com.teammark.parkingmanagement.R;
 import com.teammark.parkingmanagement.UpdateParkingReservationActivity;
 import com.teammark.parkingmanagement.ViewQRCodeActivity;
 import com.teammark.parkingmanagement.ViewReservationActivity;
+import com.teammark.parkingmanagement.model.ParkingArea;
 import com.teammark.parkingmanagement.model.ParkingReservation;
 import com.teammark.parkingmanagement.util.QRGenerator;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterReservation extends RecyclerView.Adapter<AdapterReservation.MyViewHolder>{
@@ -135,5 +137,10 @@ public class AdapterReservation extends RecyclerView.Adapter<AdapterReservation.
             imgQR = itemView.findViewById(R.id.imgQR);
 
         }
+    }
+
+    public void filterList(ArrayList<ParkingReservation> filteredList){
+        parkingReservationList = filteredList;
+        notifyDataSetChanged();
     }
 }

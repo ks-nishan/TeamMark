@@ -61,6 +61,7 @@ public class CreateParkingReservationActivity extends AppCompatActivity implemen
         edtArrivalDate = findViewById(R.id.edtArrivalDate);
         edtArrivalTime = findViewById(R.id.edtArrivalTime);
 
+
         btnReserveParkingSlot = findViewById(R.id.btnReserveParkingSlot);
 
         edtArrivalDate.setOnClickListener(new View.OnClickListener() {
@@ -81,14 +82,27 @@ public class CreateParkingReservationActivity extends AppCompatActivity implemen
             @Override
             public void onClick(View v) {
 
+                int error = 0;
+
                 String reservationID = UUID.randomUUID().toString();
 
                 String vehicleNumber = edtVehicleNumber.getText().toString();
+                error = validateVehicleNumber(edtVehicleNumber, error);
+
                 String customerName = edtCustomerName.getText().toString();
+                error = validateInputLength(edtCustomerName, error);
+
                 String licenceNumber = edtLicenceNumber.getText().toString();
+                error = validateLicenceNumber(edtLicenceNumber, error);
+
                 String contactNumber = edtContactNumber.getText().toString();
+                error = validateContactNumber(edtContactNumber, error);
+
                 String arrivalDate = edtArrivalDate.getText().toString();
+                error = validateInputLength(edtArrivalDate, error);
+
                 String arrivalTime = edtArrivalTime.getText().toString();
+                error = validateInputLength(edtArrivalTime, error);
 
                 String evcRequire = "No";
 
@@ -101,7 +115,11 @@ public class CreateParkingReservationActivity extends AppCompatActivity implemen
                 ParkingReservation reservation = new ParkingReservation(reservationID, slotID, slotTitle, vehicleNumber,
                         customerName, licenceNumber, contactNumber, arrivalDate, arrivalTime, evcRequire);
 
-                saveToFireStore(reservation);
+                if(reservation != null && error == 0){
+                    saveToFireStore(reservation);
+                }else{
+                    Toast.makeText(CreateParkingReservationActivity.this, "Invalid Input", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -179,5 +197,87 @@ public class CreateParkingReservationActivity extends AppCompatActivity implemen
         }else{
             Toast.makeText(this, "Please fill necessary fields", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private int validateInputLength(EditText edtText, int error){
+        String input = edtText.getText().toString();
+
+        if(input.length() == 0) {
+            error = 1;
+            edtText.setError("Empty Field");
+        }
+        return error;
+    }
+
+    private int validateInputNumeric(EditText edtText, int error){
+
+        int err = validateInputLength(edtText, error);
+
+        if(err == 0){
+            try {
+                int numeric = Integer.parseInt(edtText.getText().toString());
+            }catch (NumberFormatException e){
+                error = 1;
+                edtText.setError("Enter numeric value");
+            }
+        }
+
+        return error;
+    }
+
+    private int validateRad(RadioButton radioButton1, RadioButton radioButton2, int error){
+        if(!radioButton1.isChecked() || !radioButton2.isChecked()){
+            radioButton1.setError("Select an option");
+            radioButton2.setError("Select an option");
+            error = 1;
+        }
+
+        return  error;
+    }
+
+    private int validateContactNumber(EditText edtText, int error){
+
+        int err = validateInputNumeric(edtText, error);
+
+        if(err == 0){
+            if(edtText.getText().toString().length() != 9){
+                edtText.setError("Enter 9 digits");
+                error = 1;
+            }
+        }
+
+        return error;
+    }
+
+    private int validateLicenceNumber(EditText edtText, int error){
+
+        int err = validateInputLength(edtText, error);
+
+        if(err == 0){
+            String lno = edtText.getText().toString();
+
+            if(lno.length() != 8) {
+                edtText.setError("Enter 8 digits");
+                error = 1;
+            }
+        }
+
+        return error;
+    }
+
+    private int validateVehicleNumber(EditText edtText, int error){
+
+        int err = validateInputLength(edtText, error);
+
+        if(err == 0){
+            String vno = edtText.getText().toString();
+
+            if(vno.length() != 7) {
+                edtText.setError("Enter 7 digits");
+                error = 1;
+            }
+        }
+
+        return error;
     }
 }

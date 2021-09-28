@@ -8,8 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -33,6 +36,7 @@ import java.util.List;
 
 public class ViewReservationActivity extends AppCompatActivity {
 
+    private EditText searchReservation;
     private ProgressBar prgAreaList;
     private RecyclerView listParkingReservations;
     private FirebaseFirestore db;
@@ -43,6 +47,25 @@ public class ViewReservationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_reservation);
+
+        searchReservation = findViewById(R.id.searchReservation);
+
+        searchReservation.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                searchFilter(s.toString());
+            }
+        });
 
         prgAreaList = findViewById(R.id.prgAreaList);
 
@@ -64,13 +87,13 @@ public class ViewReservationActivity extends AppCompatActivity {
 
         bottomNavCus.setSelectedItemId(R.id.myReservatons);
 
-        View cusDashboard = findViewById(R.id.customerDashboard);
+        View cusList = findViewById(R.id.customerList);
 
-        cusDashboard.setOnClickListener(new View.OnClickListener() {
+        cusList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(ViewReservationActivity.this, Admin_dashboard.class);
-//                startActivity(intent);
+                Intent intent = new Intent(ViewReservationActivity.this, FindParkingSlotActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -128,5 +151,17 @@ public class ViewReservationActivity extends AppCompatActivity {
                 Toast.makeText(ViewReservationActivity.this, "No Parking Areas", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void searchFilter(String slot){
+        ArrayList<ParkingReservation> filteredList = new ArrayList<>();
+
+        for (ParkingReservation item : reservationList){
+            if (item.getSlotTitle().toLowerCase().toLowerCase().contains(slot.toLowerCase())){
+                filteredList.add(item);
+            }
+        }
+
+        adapterReservation.filterList(filteredList);
     }
 }
