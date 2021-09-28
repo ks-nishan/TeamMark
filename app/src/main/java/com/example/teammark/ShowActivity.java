@@ -57,7 +57,6 @@ public class ShowActivity extends AppCompatActivity {
                 String EMAIL;
                 Intent intent2 = getIntent();
                 EMAIL = intent2.getStringExtra("EMAIL");
-                Toast.makeText(ShowActivity.this, EMAIL, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(ShowActivity.this,Booking.class);
                 intent.putExtra("EMAIL",EMAIL);
                 intent.putExtra("Model","Benz");

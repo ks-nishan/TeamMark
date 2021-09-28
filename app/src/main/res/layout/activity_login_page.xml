@@ -45,6 +45,7 @@
         android:layout_gravity="center_horizontal"
         android:paddingLeft="20dp"
         android:hint="@string/password"
+        android:inputType="textPassword"
         android:drawableStart="@drawable/ic_baseline_lock_24"
         android:layout_marginTop="30dp"
         android:background="@drawable/input"

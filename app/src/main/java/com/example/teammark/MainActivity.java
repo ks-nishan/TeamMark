@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String EMAIL;
                 Intent intent2 = getIntent();
                 EMAIL = intent2.getStringExtra("EMAIL");
-                Toast.makeText(this, EMAIL, Toast.LENGTH_SHORT).show();
                 i = new Intent (this, ShowActivity.class);
                 i.putExtra("EMAIL",EMAIL);
                 startActivity(i);
@@ -69,7 +68,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String Email;
                 Intent intent = getIntent();
                 Email = intent.getStringExtra("EMAIL");
-                Toast.makeText(this, Email, Toast.LENGTH_SHORT).show();
                 i = new Intent (this, Profile.class);
                 i.putExtra("EMAIL",Email);
                 startActivity(i);
