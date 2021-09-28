@@ -1,12 +1,6 @@
 package com.example.teammark;
 
-import com.example.myproject.CalcDuration;
-import com.example.myproject.CalculateMoney;
-
-import org.junit.Before;
 import org.junit.Test;
-
-import java.text.ParseException;
 
 import static org.junit.Assert.*;
 
