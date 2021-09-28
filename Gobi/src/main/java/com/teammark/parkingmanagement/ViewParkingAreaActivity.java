@@ -8,9 +8,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -32,6 +35,7 @@ import java.util.List;
 
 public class ViewParkingAreaActivity extends AppCompatActivity {
 
+    private EditText searchArea;
     private ProgressBar prgAreaList;
     private Button btnAddArea;
     private RecyclerView listParkingAreas;
@@ -45,6 +49,25 @@ public class ViewParkingAreaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_parking_area);
+
+        searchArea = findViewById(R.id.searchArea);
+
+        searchArea.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                searchFilter(s.toString());
+            }
+        });
 
         prgAreaList = findViewById(R.id.prgAreaList);
 
@@ -149,5 +172,17 @@ public class ViewParkingAreaActivity extends AppCompatActivity {
                 Toast.makeText(ViewParkingAreaActivity.this, "No Parking Areas", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void searchFilter(String slot){
+        ArrayList<ParkingArea> filteredList = new ArrayList<>();
+
+        for (ParkingArea item : areaList){
+            if (item.getParkingareaTitle().toLowerCase().toLowerCase().contains(slot.toLowerCase())){
+                filteredList.add(item);
+            }
+        }
+
+        adapterParkingArea.filterList(filteredList);
     }
 }

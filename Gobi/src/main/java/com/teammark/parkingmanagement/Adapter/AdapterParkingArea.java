@@ -23,6 +23,7 @@ import com.teammark.parkingmanagement.model.ParkingArea;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterParkingArea extends RecyclerView.Adapter<AdapterParkingArea.MyViewHolder> {
@@ -148,5 +149,10 @@ public class AdapterParkingArea extends RecyclerView.Adapter<AdapterParkingArea.
             feeBike = itemView.findViewById(R.id.feeBike);
             feeCar = itemView.findViewById(R.id.feeCar);
         }
+    }
+
+    public void filterList(ArrayList<ParkingArea> filteredList){
+        parkingAreaList = filteredList;
+        notifyDataSetChanged();
     }
 }

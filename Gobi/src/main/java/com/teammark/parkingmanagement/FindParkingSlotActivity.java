@@ -8,8 +8,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -31,6 +34,7 @@ import java.util.List;
 
 public class FindParkingSlotActivity extends AppCompatActivity {
 
+    private EditText searchSlot;
     private Button btnMyReservations;
     private ProgressBar prgAreaList;
     private RecyclerView listParkingSlots;
@@ -42,6 +46,25 @@ public class FindParkingSlotActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_parking_slot);
+
+        searchSlot = findViewById(R.id.searchSlot);
+
+        searchSlot.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                searchFilter(s.toString());
+            }
+        });
 
         prgAreaList = findViewById(R.id.prgAreaList);
 
@@ -148,5 +171,17 @@ public class FindParkingSlotActivity extends AppCompatActivity {
                 Toast.makeText(FindParkingSlotActivity.this, "No Parking Areas", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void searchFilter(String slot){
+        ArrayList<ParkingArea> filteredList = new ArrayList<>();
+
+        for (ParkingArea item : slotList){
+            if (item.getParkingareaTitle().toLowerCase().toLowerCase().contains(slot.toLowerCase())){
+                filteredList.add(item);
+            }
+        }
+
+        adapterParkingSlot.filterList(filteredList);
     }
 }
