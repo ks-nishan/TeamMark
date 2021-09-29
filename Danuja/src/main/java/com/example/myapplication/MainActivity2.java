@@ -36,6 +36,8 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 insertRatings();
+                Intent intent = new Intent( MainActivity2.this,MainActivity4.class);
+                startActivity(intent);
             }
         });
         next.setOnClickListener(new View.OnClickListener() {
