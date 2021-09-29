@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
+
+import com.teammark.parkingmanagement.util.ParkingPaymentCalculator;
 
 public class CalculateParkingPaymentActivity extends AppCompatActivity {
 
@@ -18,8 +21,6 @@ public class CalculateParkingPaymentActivity extends AppCompatActivity {
     CheckBox chkWattNone, chkWattMin, chkWattMed, chkWattMax;
 
     Button btnCalcTotal;
-
-    Double totalPayment = 0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,31 +50,33 @@ public class CalculateParkingPaymentActivity extends AppCompatActivity {
         btnCalcTotal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int hours = Integer.parseInt(edtHours.getText().toString());
-                int minutes = Integer.parseInt(edtMinutes.getText().toString());
-                int time = hours + (minutes/60);
+                double hours = Double.parseDouble(edtHours.getText().toString());
+                double minutes = Double.parseDouble(edtMinutes.getText().toString());
+                double vehicleFee = 0.0;
+                double wattFee = 0.0;
+                Double totalPayment = 0.0;
 
                 if(radBike.isChecked()){
-                    totalPayment += feeBike;
+                    vehicleFee += feeBike;
                 }else if(radCar.isChecked()){
-                    totalPayment += feeCar;
+                    vehicleFee += feeCar;
                 }
 
-                totalPayment *= time;
-
                 if(chkWattMax.isChecked()){
-                    totalPayment += 50;
+                    wattFee += 50;
                 }
 
                 if(chkWattMed.isChecked()){
-                    totalPayment += 37.5;
+                    wattFee += 37.5;
                 }
 
                 if(chkWattMin.isChecked()){
-                    totalPayment += 25;
+                    wattFee += 25;
                 }
 
+                totalPayment = new ParkingPaymentCalculator(hours, minutes, vehicleFee, wattFee).calcTotalPayment();
                 edtTotal.setText(totalPayment.toString());
+                Toast.makeText(CalculateParkingPaymentActivity.this, "Calculated...", Toast.LENGTH_SHORT).show();
                 totalPayment = 0.0;
             }
         });
